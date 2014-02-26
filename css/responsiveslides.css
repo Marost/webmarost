@@ -97,7 +97,7 @@
   text-decoration: none;
   height: 32px;
   width: 38px;
-  background: url("../images/arrow-nav.png") no-repeat left center;
+  background: url("../imagenes/arrow-nav.png") no-repeat left center;
   }
 
 .callbacks_nav:hover,.callbacks_nav:active {
