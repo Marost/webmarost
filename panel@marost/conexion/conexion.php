@@ -22,8 +22,8 @@ global $fechaActual;
 
 //VARIABLES
 $carpeta_admin="panel@marost";
-$tabla_suf="mar";
-$sesion_pre="mars";
+$tabla_suf="mrt";
+$sesion_pre="mrts";
 $fechaActual=date("Y-m-d H:i:s");
 
 //EMPRESA
