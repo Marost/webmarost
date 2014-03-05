@@ -219,5 +219,4 @@ recursos/
 *.fla
 *.psd
 _notes/
-condDB.php
-panel@marost/conexion/condDB
+panel@marost/conexion/condDB.php
