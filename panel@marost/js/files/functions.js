@@ -303,7 +303,7 @@ $(function() {
 	
 	$("#uploader_galeria").pluploadQueue({
 		runtimes : 'html5,html4',
-		url : '/panel@pmarketing/php/upload_galeria.php',
+		url : '/panel@marost/php/upload_galeria.php',
 		max_file_size : '100mb',
 		chunk_size : '1mb',
 		unique_names : true,
@@ -318,7 +318,7 @@ $(function() {
 	
 	$("#uploader_clientes").pluploadQueue({
 		runtimes : 'html5,html4',
-		url : '/panel@pmarketing/php/upload_clientes.php',
+		url : '/panel@marost/php/upload_clientes.php',
 		max_file_size : '100mb',
 		chunk_size : '1mb',
 		unique_names : true,
@@ -333,7 +333,7 @@ $(function() {
 	
 	$("#uploader").pluploadQueue({
 		runtimes : 'html5,html4',
-		url : '/panel@pmarketing/php/upload.php',
+		url : '/panel@marost/php/upload.php',
 		max_file_size : '100mb',
 		chunk_size : '1mb',
 		unique_names : true,
@@ -348,7 +348,7 @@ $(function() {
 	
 	$("#uploader_eventos").pluploadQueue({
 		runtimes : 'html5,html4',
-		url : '/panel@pmarketing/php/upload_eventos.php',
+		url : '/panel@marost/php/upload_eventos.php',
 		max_file_size : '100mb',
 		chunk_size : '1mb',
 		unique_names : true,
@@ -363,7 +363,7 @@ $(function() {
 	
 	$("#uploader_pdf").pluploadQueue({
 		runtimes : 'html5,html4',
-		url : '/panel@pmarketing/php/upload_pdf.php',
+		url : '/panel@marost/php/upload_pdf.php',
 		max_file_size : '200mb',
 		chunk_size : '1mb',
 		unique_names : true,
@@ -378,7 +378,7 @@ $(function() {
 	
 	$("#uploader_video").pluploadQueue({
 		runtimes : 'html5,html4',
-		url : '/panel@pmarketing/php/upload_video.php',
+		url : '/panel@marost/php/upload_video.php',
 		max_file_size : '500mb',
 		chunk_size : '1mb',
 		unique_names : true,
