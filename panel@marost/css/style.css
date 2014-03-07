@@ -101,37 +101,37 @@ p {margin-bottom:20px;}
 		}
 			
 	#menu ul li span a#link-inicio {
-		background-image:url(../images/home_32.png);					
+		background-image:url(../../panel@impacto/images/home_32.png);					
 		}
 	#menu ul li span a#link-info {
-		background-image:url(../images/info_32.png);					
+		background-image:url(../../panel@impacto/images/info_32.png);					
 		}
 	#menu ul li span a#link-estadisticas {
-		background-image:url(../images/estadisticas_32.png);					
+		background-image:url(../../panel@impacto/images/estadisticas_32.png);					
 		}
 	#menu ul li span a#link-blog {
-		background-image:url(../images/blog_32.png);					
+		background-image:url(../../panel@impacto/images/blog_32.png);					
 		}
 	#menu ul li span a#link-usuarios {
-		background-image:url(../images/users_32.png);					
+		background-image:url(../../panel@impacto/images/users_32.png);					
 		}
 	#menu ul li span a#link-evaluacion {
-		background-image:url(../images/evaluacion_32.png);					
+		background-image:url(../../panel@impacto/images/evaluacion_32.png);					
 		}
 	#menu ul li span a#link-proyectos {
-		background-image:url(../images/proyectos_32.png);					
+		background-image:url(../../panel@impacto/images/proyectos_32.png);					
 		}
 	#menu ul li span a#link-foro {
-		background-image:url(../images/foro_32.png);					
+		background-image:url(../../panel@impacto/images/foro_32.png);					
 		}
 	#menu ul li span a#link-consulta {
-		background-image:url(../images/consulta_32.png);					
+		background-image:url(../../panel@impacto/images/consulta_32.png);					
 		}
 	#menu ul li span a#link-confidencial {
-		background-image:url(../images/confidencial_32.png);					
+		background-image:url(../../panel@impacto/images/confidencial_32.png);					
 		}
 	#menu ul li span a#link-sugerencia {
-		background-image:url(../images/sugerencia_32.png);					
+		background-image:url(../../panel@impacto/images/sugerencia_32.png);					
 		}
 		
 	#menu ul li ul{
@@ -157,19 +157,19 @@ p {margin-bottom:20px;}
 			}
 		
 		#menu ul li ul li a.add {
-			background-image:url(../images/add_16.png);
+			background-image:url(../../panel@impacto/images/add_16.png);
 			}
 		#menu ul li ul li a.list {
-			background-image:url(../images/arrow_right_16.png);
+			background-image:url(../../panel@impacto/images/arrow_right_16.png);
 			}
 		#menu ul li ul li a.bullet {
-			background-image:url(../images/bullet_blue.png);
+			background-image:url(../../panel@impacto/images/bullet_blue.png);
 			}
 		#menu ul li ul li a.contacto {
-			background-image:url(../images/contacto_16.png);
+			background-image:url(../../panel@impacto/images/contacto_16.png);
 			}
 		#menu ul li ul li a.presupuesto {
-			background-image:url(../images/presupuesto_16.png);
+			background-image:url(../../panel@impacto/images/presupuesto_16.png);
 			}
 	
 	/* Contenido de #contenido */			

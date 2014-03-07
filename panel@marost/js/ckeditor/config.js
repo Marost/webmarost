@@ -4,10 +4,10 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
 CKEDITOR.editorConfig = function(config) {
-   config.filebrowserBrowseUrl = 'http://impactoevangelistico.net/panel@impacto/js/kcfinder/browse.php?type=files';
-   config.filebrowserImageBrowseUrl = 'http://impactoevangelistico.net/panel@impacto/js/kcfinder/browse.php?type=images';
-   config.filebrowserFlashBrowseUrl = 'http://impactoevangelistico.net/panel@impacto/js/kcfinder/browse.php?type=flash';
-   config.filebrowserUploadUrl = 'http://impactoevangelistico.net/panel@impacto/js/kcfinder/upload.php?type=files';
-   config.filebrowserImageUploadUrl = 'http://impactoevangelistico.net/panel@impacto/js/kcfinder/upload.php?type=images';
-   config.filebrowserFlashUploadUrl = 'http://impactoevangelistico.net/panel@impacto/js/kcfinder/upload.php?type=flash';
+   config.filebrowserBrowseUrl = '../js/kcfinder/browse.php?type=files';
+   config.filebrowserImageBrowseUrl = '../js/kcfinder/browse.php?type=images';
+   config.filebrowserFlashBrowseUrl = '../js/kcfinder/browse.php?type=flash';
+   config.filebrowserUploadUrl = '../js/kcfinder/upload.php?type=files';
+   config.filebrowserImageUploadUrl = '../js/kcfinder/upload.php?type=images';
+   config.filebrowserFlashUploadUrl = '../js/kcfinder/upload.php?type=flash';
 };
