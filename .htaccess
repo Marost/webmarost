@@ -301,7 +301,8 @@ FileETag None
 
 RewriteRule ^blog$                                        /blog.php
 RewriteRule ^blog/([0-9]*)-(.*)$                          /blog-single.php?id=$1&url=$2
-RewriteRule ^panel@marost/$                             /panel@marost/login.php
+RewriteRule ^portafolio$                                  /portafolio.php
+RewriteRule ^panel@marost/$                               /panel@marost/login.php
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
