@@ -8,7 +8,7 @@
 /* -------------------------------------------------- */
 body {
     font-family: "Roboto",Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     color: #888;
     line-height: 1.7em;
     padding: 0;
@@ -508,8 +508,7 @@ footer {
     padding: 0;
 }
 
-    .blog-list li {
-        list-style: none;
+    .blog-list article {
         background: url(../imagenes/dotwhite50.png);
         line-height: 1.7em;
     }
@@ -535,7 +534,7 @@ footer {
     padding-left: 24px;
 }
 /* blog list */
-.blog-list li {
+.blog-list article {
     margin-bottom: 40px;
 }
 
@@ -832,6 +831,7 @@ footer {
 
 .post-image img {
     margin-bottom: 10px;
+    width: 100%
 }
 
 /* -------------------------------------------------- */

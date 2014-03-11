@@ -1,7 +1,30 @@
+<?php
+require_once("panel@marost/conexion/conexion.php");
+require_once("panel@marost/conexion/funciones.php");
+
+//VARIABLES DE URL
+$ReqId=$_REQUEST["id"];
+$ReqUrl=$_REQUEST["url"];
+
+//NOTICIA
+$rst_nota=mysql_query("SELECT * FROM mrt_noticia WHERE id=$ReqId;", $conexion);
+$fila_nota=mysql_fetch_array($rst_nota);
+
+//VARIABLES
+$nota_titulo=$fila_nota["titulo"];
+$nota_contenido=$fila_nota["contenido"];
+$nota_imagen=$fila_nota["imagen"];
+$nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
+$nota_fecha_publicacion=$fila_nota["fecha_publicacion"];
+
+//URL
+$nota_UrlImg=$web."imagenes/upload/".$nota_imagen_carpeta."".$nota_imagen;
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>Truehost - Responsive HTML 5 Hosting Template</title>
+    <title><?php echo $nota_titulo; ?></title>
     
     <?php require_once("wg-header-script.php"); ?>
 
@@ -14,24 +37,6 @@
         <?php require_once("wg-header.php"); ?>
         <!-- header close -->
 
-        <!-- subheader begin -->
-        <div id="subheader">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <h1>Blog</h1>
-                        <span>Some Cool Page Description.</span>
-                        <ul class="crumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="sep">/</li>
-                            <li>Blog Right Sidebar</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- subheader close -->
-
         <!-- content begin -->
         <div id="content">
             <div class="container">
@@ -41,27 +46,15 @@
                             <div class="date-box"><span class="day">20</span> <span class="month">SEP</span> </div>
                             <div class="post-content">
                                 <div class="post-image">
-                                    <div class="callbacks_container">
-                                        <ul class="rslides pic_slider">
-                                            <li>
-                                                <img src="imagenes/pic-blog-1.jpg" alt="" />
-                                            </li>
-                                            <li>
-                                                <img src="imagenes/pic-blog-2.jpg" alt="" />
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <img src="<?php echo $nota_UrlImg; ?>" alt="<?php echo $nota_titulo; ?>" />
                                 </div>
 
 
                                 <div class="post-text">
-                                    <h3><a href="css/#">Sed ut perspiciatis unde omnis iste natus</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                                          </p>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.                                      </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+                                    <h3><?php echo $nota_titulo; ?></h3>
+                                    <?php echo $nota_contenido; ?>
                                 </div>
                             </div>
-                            <div class="post-meta"><span><i class="icon-user"></i>By: <a href="#">Lynda Wu</a></span> <span><i class="icon-tag"></i><a href="#">News</a>, <a href="#">Events</a></span> <span><i class="icon-comment"></i><a href="#">10 Comments</a></span></div>
                         </div>
 
                     </div>

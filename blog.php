@@ -6,9 +6,9 @@ require_once("panel@marost/conexion/funciones.php");
 $rst_notas=mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 ORDER BY fecha_publicacion DESC", $conexion);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>Truehost - Responsive HTML 5 Hosting Template</title>
+    <title>Blog | <?php echo $web_nombre." - ".$social_palabrasclave; ?></title>
     
     <?php require_once("wg-header-script.php"); ?>
 
@@ -21,29 +21,13 @@ $rst_notas=mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 ORDER BY fech
         <?php require_once("wg-header.php"); ?>
         <!-- header close -->
 
-        <!-- subheader begin -->
-        <div id="subheader">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <h1>Blog</h1>
-                        <ul class="crumb">
-                            <li><a href="/">Inicio</a></li>
-                            <li class="sep">/</li>
-                            <li>Blog</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- subheader close -->
-
         <!-- content begin -->
         <div id="content">
             <div class="container">
                 <div class="row">
                     <div class="span12">
-                        <ul class="blog-list">
+
+                        <section class="blog-list">
 
                             <?php while($fila_nota=mysql_fetch_array($rst_notas)){
                                     $nota_id=$fila_nota["id"];
@@ -59,29 +43,26 @@ $rst_notas=mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 ORDER BY fech
                                     $nota_URLWeb=$web."blog/".$nota_id."-".$nota_url;
                                     $nota_URLImg=$web."imagenes/upload/".$nota_imagen_carpeta."".$nota_imagen;
                             ?>
-                            <li>
-                                <div class="date-box"><span class="day">20</span> <span class="month">SEP</span></div>
+                            <article>
+                                <div class="date-box">
+                                    <span class="day">20</span> 
+                                    <span class="month">SEP</span>
+                                </div>
+
                                 <div class="post-content">
                                     <div class="post-image">
-                                        <div class="callbacks_container">
-                                            <ul class="rslides pic_slider">
-                                                <li>
-                                                    <img src="<?php echo $nota_URLImg; ?>" alt="" />
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <img src="<?php echo $nota_URLImg; ?>" alt="" />
                                     </div>
-
 
                                     <div class="post-text">
                                         <h3><a href="<?php echo $nota_URLWeb; ?>"><?php echo $nota_titulo; ?></a></h3>
                                         <?php echo $nota_contenido; ?>
                                     </div>
                                 </div>
-                            </li>
+                            </article>
                             <?php } ?>
 
-                        </ul>
+                        </section>
 
                         <div class="pagination text-center ">
                             <ul>
