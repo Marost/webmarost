@@ -1,7 +1,11 @@
+<?php
+require_once("panel@marost/conexion/conexion.php");
+require_once("panel@marost/conexion/funciones.php");
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Truehost - Responsive HTML 5 Hosting Template</title>
+    <title><?php echo $web_nombre." | ".$social_palabrasclave; ?></title>
     
     <?php require_once("wg-header-script.php"); ?>
 
