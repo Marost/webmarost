@@ -1,6 +1,10 @@
 <?php
 require_once("panel@marost/conexion/conexion.php");
 require_once("panel@marost/conexion/funciones.php");
+
+//VARIABLES
+$script_themepunch=true;
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
