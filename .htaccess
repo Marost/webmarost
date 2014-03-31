@@ -302,6 +302,7 @@ FileETag None
 RewriteRule ^blog$                                        /blog.php
 RewriteRule ^blog/([0-9]*)-(.*)$                          /blog-single.php?id=$1&url=$2
 RewriteRule ^portafolio$                                  /portafolio.php
+RewriteRule ^portafolio/(.*)$                             /portafolio.php?url=$1
 RewriteRule ^panel@marost/$                               /panel@marost/login.php
 
 # ----------------------------------------------------------------------
