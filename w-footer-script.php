@@ -149,3 +149,65 @@
     });//]]>
 
 </script>
+
+<!-- accordion -->
+<script type="text/javascript" src="js/accordion/custom.js"></script>
+
+<!-- fancyBox -->
+<script type="text/javascript" src="js/portfolio/lib/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/portfolio/source/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/portfolio/source/helpers/jquery.fancybox-media.js"></script>
+
+<!-- isotope -->
+<script src="js/portfolio/jquery.isotope.js" type="text/javascript"></script>
+
+<!-- isotope -->
+<script type="text/javascript">
+    $(window).load(function(){
+        var $container = $('.portfolioContainer');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        $('.portfolioFilter a').click(function(){
+            $('.portfolioFilter .current').removeClass('current');
+            $(this).addClass('current');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    });
+</script>
+
+<!-- fancyBox -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /* Simple image gallery. Uses default settings */
+        $('.fancybox').fancybox();
+
+        /* media effects*/
+        $(document).ready(function() {
+            $('.fancybox-media').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                helpers : {
+                    media : {}
+                }
+            });
+        });
+
+    });
+</script>

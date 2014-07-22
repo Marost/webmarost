@@ -54,3 +54,7 @@
 
 <!-- testimonials -->
 <link rel="stylesheet" href="js/testimonials/fadeeffect.css" type="text/css" media="all">
+
+<!-- fancyBox -->
+<link rel="stylesheet" type="text/css" href="js/portfolio/source/jquery.fancybox.css" media="screen" />
+<link rel="stylesheet" href="js/portfolio/isotope.css">
