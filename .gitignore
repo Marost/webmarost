@@ -220,3 +220,4 @@ recursos/
 *.psd
 _notes/
 panel@marost/conexion/condDB.php
+.idea/

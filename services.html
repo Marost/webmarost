@@ -1,326 +1,641 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
+
 <head>
-    <title>Truehost - Responsive HTML 5 Hosting Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive Minimal Bootstrap Theme">
-    <meta name="keywords" content="responsive,minimal,bootstrap,theme">
-    <meta name="author" content="">
+	<title>Ainex - A Professional Hosting Theme</title>
+	
+	<meta charset="utf-8">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
     
+    <!-- Favicon --> 
+	<link rel="shortcut icon" href="images/favicon.ico">
     
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
+    <!-- this styles only adds some repairs on idevices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- Google fonts - witch you want to use - (rest you can just remove) -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700italic,700,600italic,600,400italic,300italic,300|Roboto:100,300,400,500,700&amp;subset=latin,latin-ext' type='text/css' />
+    
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
     
-    <!-- CSS Files
-    ================================================== -->
-    <link rel="stylesheet" href="css/main.css" type="text/css" id="main-css">
+    <!-- ######### CSS STYLES ######### -->
+	
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+    
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    
+    <!-- responsive devices styles -->
+	<link rel="stylesheet" media="screen" href="css/responsive-leyouts.css" type="text/css" />
+    
+<!-- just remove the below comments witch color skin you want to use -->
+    <!--<link rel="stylesheet" href="css/colors/lightblue.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/lightgreen.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/blue.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/green.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/red.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/cyan.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/purple.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/pink.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/brown.css" />-->
+    
+<!-- just remove the below comments witch bg patterns you want to use --> 
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-default.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-one.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-two.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-three.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-four.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-five.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-six.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-seven.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-eight.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-nine.css" />-->
+    
 
-    <!-- Javascript Files
-    ================================================== -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/easing.js"></script>
-    <script src="js/jquery.ui.totop.js"></script>
-    <script src="js/selectnav.js"></script>
-    <script src="js/ender.js"></script>
-    <script src="js/jquery.lazyload.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/custom.js"></script>
+    
+    <!-- sticky menu -->
+    <link rel="stylesheet" href="js/sticky-menu/core.css">
+ 
 
 </head>
 
 <body>
-    <div id="wrapper">
 
-        <!-- header begin -->
-        <header>
-            
-            <div class="container">
-                <div id="logo">
-                    <div class="inner">
-                        <a href="index.html">
-                            <img src="imagenes/logo.png" alt="logo"></a>
-                    </div>
-                </div>
+<div class="wrapper_boxed">
 
-                <!-- mainmenu begin -->
-                <ul id="mainmenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Hosting</a>
-                    	<ul>
-                        	<li><a href="packages.html">Packages</a></li>
-                        	<li><a href="services.html">Services</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Features</a>
-                        <ul>
-                           <li><a href="fullwidth.html">Fullwidth</a></li>
-                            <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                            <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="testimonial.html">Testimonial</a></li>
-                            <li><a href="carousel.html">Carousel</a></li>
-                            <li><a href="elements.html">Elements</a></li>
-                            <li><a href="grid.html">Grid System</a></li>
-                            <li><a href="icons.html">Font Awesome Icons</a></li>
-                            <li><a href="parallax.html">Parallax</a></li>
-                            <li><a href="pricing-table.html">Pricing Tables</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Portfolio</a>
-                        <ul>
-                            <li><a href="portfolio-4-columns.html">4 Columns</a>
-                            <li><a href="portfolio-3-columns.html">3 Columns</a>
-                            <li><a href="portfolio-2-columns.html">2 Columns</a>
-                            <li><a href="single-project.html">Single Project</a>
-                        </ul>
-                    </li>
-                    <li><a href="blog.html">Blog</a>
-                        <ul>
-                            <li><a href="blog.html">Full Width</a></li>
-                            <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
-                            <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
-                            <li><a href="blog-single.html">Single Post</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <!-- mainmenu close -->
+<div class="site_wrapper">
+   
+<div class="top_section">
+    <div class="container">
+    	
+    	<ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            <li>&nbsp;</li>
+            <li><a href="#">Live Chat <i class="fa fa-comment"></i></a></li>
+            <li>&nbsp;</li>
+            <li>Call Today: <strong>+1 (099) 456-7890</strong></li>   
+        </ul>
+        
+    </div>
+</div><!-- end top links -->
+   
 
-            </div>
-        </header>
-        <!-- header close -->
+<!-- HEADER -->
+<header id="header">
 
-        <!-- subheader begin -->
-        <div id="subheader">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <h1>Services</h1>
-                    <span>We Provide Best Solutions.</span></div>
-                </div>
-            </div>
-        </div>
-        <!-- subheader close -->
-
-        <!-- content begin -->
-        <div id="content">
-            <div class="container">
-            	<div class="block-title text-center">
-                    <h1>Complete Solutions For Your Idea</h1>
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
-                </div>  
-                <hr>
-                <div class="row">
-                	<div class="span8">
-                    	<div class="row">
-            	<!-- feature box begin -->
-                    <div class="feature-box-small-icon span4">
-                        <div class="inner">
-                            <i class="icon-rocket circle"></i>
-                            <div class="text">
-                                <h3>Shared Hosting</h3>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- feature box close -->
+	<!-- Top header bar -->
+	<div id="trueHeader">
+    
+	<div class="wrapper">
+    
+     <div class="container">
+    
+		<!-- Logo -->
+		<div class="one_fourth"><a href="index.html" id="logo"></a></div>
+		
+        <!-- Menu -->
+        <div class="three_fourth last">
+           
+           <nav id="access" class="access" role="navigation">
+           
+            <div id="menu" class="menu">
                 
-                <!-- feature box begin -->
-                    <div class="feature-box-small-icon span4">
-                        <div class="inner">
-                            <i class="icon-reorder circle"></i>
-                            <div class="text">
-                                <h3>Virtual Server</h3>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <!-- feature box close -->
-                    <hr class="blank">
-               <!-- feature box begin -->
-                    <div class="feature-box-small-icon span4">
-                        <div class="inner">
-                            <i class="icon-thumbs-up circle"></i>
-                            <div class="text">
-                                <h3>Website Development</h3>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- feature box close -->
-            
-            	    <!-- feature box begin -->
-                    <div class="feature-box-small-icon span4">
-                        <div class="inner">
-                            <i class="icon-tablet circle"></i>
-                            <div class="text">
-                                <h3>Mobile Application</h3>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- feature box close -->
-                    
-                    <hr class="blank">
-                    
-                    <div class="de_testi span8">
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </blockquote>
-                            <div class="de_testi_by">
-                                <div class="de_testi_pic">
-                                    <img src="imagenes/testi_pic (1).jpg" alt="" class="img-circle">
-                                </div>
-                                <div class="de_testi_company">
-                                    <strong>John Doe</strong>, Microsoft
-                                </div>
-                            </div>
-                        </div>
-
-            </div>
-                    </div>
-                    
-                  <div class="span4">
-                    	<h3>Why Choose Us</h3>
-                          <div class="accordion" id="accordion2">
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">High Performance 
-                                    </a>
-                                </div>
-                                <div id="collapseOne" class="accordion-body collapse in">
-                                    <div class="accordion-inner">
-                                        <img src="imagenes/feature-pic-1.jpg" class="full-size" alt="">
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Traffic Booster</a>
-                                </div>
-                                <div id="collapseTwo" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <img src="imagenes/feature-pic-2.jpg" class="full-size" alt="">
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">Reliablae Hardware
-                                    </a>
-                                </div>
-                                <div id="collapseThree" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <img src="imagenes/feature-pic-3.jpg" class="full-size" alt="">
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                  </div>
-                </div>              
-            </div>
-            
-        </div>
-        <!-- content close -->
-
-        <!-- footer begin -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="span3">
-                        <img src="imagenes/logo-small.png" alt="logo"><br>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    </div>
-
-                    <div class="span3">
-                        <div class="widget widget_recent_post">
-                            <h3>Latest News</h3>
-                            <ul>
-                                <li><a href="#">Sed ut perspiciatis unde omnis</a></li>
-                                <li><a href="#">Duis aute irure dolor in</a></li>
-                                <li><a href="#">Excepteur sint occaecat cupidatat </a></li>
-                                <li><a href="#">Nemo enim ipsam voluptatem quia  </a></li>
-                                <li><a href="#">Quis autem vel eum iure</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="span3">
-                        <div class="widget widget_tags">
-                            <h3>Tags</h3>
-                            <ul>
-                                <li><a href="#link">Art</a></li>
-                                <li><a href="#link">Application</a></li>
-                                <li><a href="#link">Design</a></li>
-                                <li><a href="#link">Entertainment</a></li>
-                                <li><a href="#link">Internet</a></li>
-                                <li><a href="#link">Marketing</a></li>
-                                <li><a href="#link">Music</a></li>
-                                <li><a href="#link">Print</a></li>
-                                <li><a href="#link">Programming</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="span3">
-                        <h3>Contact Us</h3>
-                        <div class="widget widget-address">
-                            <address>
-                                100 Mainstreet Center, Sydney
-                                <span><strong>Phone:</strong>(208) 333 9296</span>
-                                <span><strong>Fax:</strong>(208) 333 9298</span>
-                                <span><strong>Email:</strong><a href="mailto:contact@example.com">contact@example.com</a></span>
-                                <span><strong>Web:</strong><a href="#test">http://example.com</a></span>
-                            </address>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="subfooter">
-                <div class="container">
-                    <div class="row">
-                        <div class="span6">
-                            &copy; Copyright 2013 - Truehost by Designesia                     
-                        </div>
-                        <div class="span6">
-                            <nav>
+				<ul id="tiny">
+                
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="standard-hosting.html">Web Hosting<i class="fa fa-angle-down"></i></a>
+                        <ul>
+                            <li><a href="standard-hosting.html">Standard Hosting</a></li>					
+                            <li><a href="professional-hosting.html">Professional Hosting</a></li>
+                            <li><a href="advanced-hosting.html">Advanced Hosting</a></li>
+                            <li><a href="unlimited-hosting.html">Unlimited Hosting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Features<i class="fa fa-angle-down"></i></a>
+                        
+                        <ul>
+                            <li><a href="standard-page.html">Standard/About Page</a></li>
+                            <li><a href="about-page.html">About Page Style 2</a></li>
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="elements.html">Elements</a></li>
+                            <li><a href="pricing-tables.html">Pricing Tables</a></li>
+                            <li><a href="columns.html">Page Columns</a></li>
+                            <li><a href="testimonials.html">Testimonials</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="tabs.html">Tabs</a></li>
+                            <li><a href="#">Portfolio Pages ></a>
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Features</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="portfolio-one.html">Single Image</a></li>
+                                    <li><a href="portfolio-two.html">2 Columns</a></li>
+                                    <li><a href="portfolio-three.html">3 Columns</a></li>
+                                    <li><a href="portfolio-four.html">4 Columns</a></li>
+                                    <li><a href="portfolio-five.html">Portfolio Fancy</a></li>
                                 </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+                            </li>
+                            <li><a href="full-width.html">Full Width Page</a></li>
+                            <li><a href="left-sidebar.html">Left Sidebar Page</a></li>
+                            <li><a href="right-sidebar.html">Right Sidebar Page</a></li>
+                            <li><a href="left-nav.html">Left Navigation</a></li>
+                            <li><a href="right-nav.html">Right Navigation</a></li>
+                            <li><a href="404.html">404 Error Page</a></li>
+                        </ul>
+                        
+                    
+                    </li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="blog.html">Blog<i class="fa fa-angle-down"></i></a>
+                        <ul>
+                            <li><a href="blog.html">with Large image</a></li>
+                            <li><a href="blog-2.html">with Small image</a></li>
+                            <li><a href="blog-post.html">Single post</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    
+                </ul>
+                
             </div>
+            
+        </nav><!-- end nav menu -->
+      
+        </div>
+        
+        
+		</div>
+		
+	</div>
+    
+	</div>
+    
+</header><!-- end header -->
+   
 
-        </footer>
-        <!-- footer close -->
+<div class="clearfix"></div>
+ 
+<div class="page_title">
+	<div class="container">
+		<div class="title"><h1>Services</h1></div>
+        <div class="pagenation">&nbsp;<a href="index.html">Home</a> <i>/</i> Services</div>
+	</div>
+</div><!-- end page title --> 
 
+<div class="clearfix"></div>
+
+
+<!-- Contant
+======================================= -->
+
+<div class="container">
+
+	<div class="content_fullwidth">
+		
+        <div class="our_products two">
+            
+            <h2><strong>Our Products /</strong> Features</h2>
+            
+            <ul>
+                <li>
+                    <div class="icon"><i class="fa fa-globe"></i></div>
+                    <h4>Domain Registar</h4>
+                    <p>If you are going to use a passage of there isn't anything embarrass hidden in the middle text making this the first hidden in the middle true generator on the Internet.</p>
+                </li>
+                
+                <li class="last">
+                    <div class="icon"><i class="fa fa-desktop"></i></div>
+                    <h4>Web site Hosting</h4>
+                    <p>If you are going to use a passage of there isn't anything embarrass hidden in the middle text making this the first hidden in the middle true generator on the Internet.</p>
+                </li>
+                
+                <li>
+                    <div class="icon"><i class="fa fa-share"></i></div>
+                    <h4>Reseller Hosting</h4>
+                    <p>If you are going to use a passage of there isn't anything embarrass hidden in the middle text making this the first hidden in the middle true generator on the Internet.</p>
+                </li>
+                
+                <li class="last">
+                    <div class="icon"><i class="fa fa-cloud"></i></div>
+                    <h4>Cloud Servers</h4>
+                    <p>If you are going to use a passage of there isn't anything embarrass hidden in the middle text making this the first hidden in the middle true generator on the Internet.</p>
+                </li>
+            
+            </ul>
+                 
+        </div><!-- end products -->
+        
+        <div class="clearfix divider_line7"></div>
+        
+        <div class="one_full">
+              
+        <div class="one_third">
+        <img src="http://placehold.it/300x140" alt="" class="image_left" />
+        <h3><i>Internet Marketing</i></h3>
+        <p>Lorem Ipsum, you need to be sure there anythin embarrassing hidden in the middle of text in the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+        
+        </div><!-- end section -->
+        
+        <div class="one_third">
+        	
+            <img src="http://placehold.it/300x140" alt="" class="image_left" />
+            <h3><i>Website Design</i></h3>
+        <p>Predefined chunks you need be sure there anythin embarrassing hidden in the middle of text in the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+        </div><!-- end section --> 
+        
+        <div class="one_third last">
+        	
+            <img src="http://placehold.it/300x140" alt="" class="image_left" />
+            <h3><i>Web Development</i></h3>
+        <p>Manu desktop you need to be sure there anythin embarrassing hidden in the middle of text in the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+        </div><!-- end section -->
+        
+    </div><!-- end section -->
+    
+    <div class="clearfix divider_line8"></div>
+    
+    <div class="four_col_fusection inner">
+
+	<div class="one_fourth">
+    	
+        <i class="fa fa-desktop fa-4x"></i>
+        
+        <div class="clearfix"></div>
+        
+    	<h3>Responsive</h3>
+        
+        <p>Latin words the combined with handful model sentence structures looks reasonable.</p>
+		<br />
+		<a href="#">Read More <i class="fa fa-angle-right"></i></a>
+    
+    </div><!-- end section -->
+    
+    <div class="one_fourth">
+    	
+        <i class="fa fa-cog fa-4x"></i>
+        
+        <div class="clearfix"></div>
+        
+    	<h3>Slideshows</h3>
+        
+        <p>Latin words the combined with handful model sentence structures looks reasonable.</p>
+		<br />
+		<a href="#">Read More <i class="fa fa-angle-right"></i></a>
+    
+    </div><!-- end section -->
+    
+    <div class="one_fourth">
+    	
+        <i class="fa fa-leaf fa-4x"></i>
+        
+        <div class="clearfix"></div>
+        
+    	<h3>Fast Easy</h3>
+        
+        <p>Latin words the combined with handful model sentence structures looks reasonable.</p>
+		<br />
+		<a href="#">Read More <i class="fa fa-angle-right"></i></a>
+    
+    </div><!-- end section -->
+    
+    <div class="one_fourth last">
+    	
+        <i class="fa fa-umbrella fa-4x"></i>
+        
+        <div class="clearfix"></div>
+        
+    	<h3>2 Layouts</h3>
+        
+        <p>Latin words the combined with handful model sentence structures looks reasonable.</p>
+		<br />
+		<a href="#">Read More <i class="fa fa-angle-right"></i></a>
+    
+    </div><!-- end section -->
+
+	</div><!-- end site features -->
+    
+    <div class="clearfix divider_line3"></div>
+	
+    <div class="get_features">
+
+            <div class="one_third">
+            
+                <ul class="get_features_list">
+                    <li class="left"><i class="fa fa-coffee fa-2x"></i></li>
+                    <li class="right">
+                    <h5>Smart and Flexible</h5>
+                    <p>Lorem lpsum simply dummy typesetting industry ever.</p></li>
+                </ul>
+                
+                <ul class="get_features_list">
+                    <li class="left"><i class="fa fa-file fa-2x"></i></li>
+                    <li class="right">
+                    <h5>130+ HTML Pages</h5>
+                    <p>Lorem lpsum simply dummy typesetting industry ever.</p></li>
+                </ul>
+                
+                <ul class="get_features_list last">
+                    <li class="left"><i class="fa fa-fullscreen fa-2x"></i></li>
+                    <li class="right">
+                    <h5>2 Different Websites</h5>
+                    <p>Lorem lpsum simply dummy typesetting industry ever.</p></li>
+                </ul>
+                
+            </div>
+            
+            <div class="one_third">
+            
+                <ul class="get_features_list">
+                    <li class="left"><i class="fa fa-resize-full fa-2x"></i></li>
+                    <li class="right">
+                    <h5>Fully Responsive</h5>
+                    <p>Lorem lpsum simply dummy typesetting industry ever.</p></li>
+                </ul>
+                
+                <ul class="get_features_list">
+                    <li class="left"><i class="fa fa-th fa-2x"></i></li>
+                    <li class="right">
+                    <h5>Simple &amp; Clean</h5>
+                    <p>Lorem lpsum simply dummy typesetting industry ever.</p></li>
+                </ul>
+                
+                <ul class="get_features_list last">
+                    <li class="left"><i class="fa fa-crop fa-2x"></i></li>
+                    <li class="right">
+                    <h5>Fullwidth &amp; Boxed</h5>
+                    <p>Lorem lpsum simply dummy typesetting industry ever.</p></li>
+                </ul>
+
+            </div>
+            
+            <div class="one_third last">
+            
+                <ul class="get_features_list">
+                    <li class="left"><i class="fa fa-laptop fa-2x"></i></li>
+                    <li class="right">
+                    <h5>Cross Browsered</h5>
+                    <p>Lorem lpsum simply dummy typesetting industry ever.</p></li>
+                </ul>
+                
+                <ul class="get_features_list">
+                    <li class="left"><i class="fa fa-trophy fa-2x"></i></li>
+                    <li class="right">
+                    <h5>Well Structured</h5>
+                    <p>Lorem lpsum simply dummy typesetting industry ever.</p></li>
+                </ul>
+              
+                <ul class="get_features_list last">
+                    <li class="left"><i class="fa fa-align-justify fa-2x"></i></li>
+                    <li class="right">
+                    <h5>Layered PSD Files</h5>
+                    <p>Lorem lpsum simply dummy typesetting industry ever.</p></li>
+                </ul>
+                
+            </div>
+ 
+        </div>
+     
+</div>
+
+</div><!-- end content area -->
+
+
+<div class="bottom_section">
+
+	<div class="waves_graph2"></div>
+   
+    <div class="big_text2">
+    	<div class="container"><i>Best for Small Business Hosting Services.</i> YOUR E-BUSINESS IS OUR JOB!</div>
+    </div>
+       
+</div><!-- end bottom section -->
+
+
+<div class="footer">
+
+	<div class="clearfix mar_top5"></div>
+
+	<div class="container">
+    	
+        <div class="one_fourth">
+        
+        	<h3>Support/Help</h3>
+            
+            <ul class="list">
+            <li><a href="#"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Knowledge Base</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Downloads</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> My Account</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Submit Ticket</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Sign Up</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Affiliates</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Video Tutorials</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Hosting Industry News</a></li>
+			</ul>
+            
+        </div><!-- end section -->
+        
+        <div class="one_fourth">
+        
+        	<h3>Recent Blog Posts</h3>
+            
+            <ul class="recent_blogs">     
+                <li>
+                <img src="http://placehold.it/50x50" alt="" />
+                <p><a href="#">Lorem Ipsum dummy</a>
+                <i>November 01, 2013<br />
+                No Comments</i></p>
+                </li>
+                <li>
+                <img src="http://placehold.it/50x50" alt="" />
+                <p><a href="#">There are variations</a>
+                <i>November 01, 2013<br />
+                No Comments</i></p>
+                </li>
+                <li class="last">
+                <img src="http://placehold.it/50x50" alt="" />
+                <p><a href="#">Slightly to believable</a>
+                <i>November 01, 2013<br />
+                No Comments</i></p>
+                </li>
+			</ul>
+            
+        </div><!-- end section -->
+        
+        <div class="one_fourth">
+        
+        	<h3>Transfer Your Site</h3>
+            
+            We'll help you t make transferring your website and domain name fast and easy transfer.
+            <div class="mar_top2"></div>
+            <div class="clearfix"></div>
+            
+            <ul class="list">
+                <li><i class="fa fa-angle-right"></i> Free Website Transfer</li>
+                <li><i class="fa fa-angle-right"></i> Free Domain Transfer</li>
+                <li><i class="fa fa-angle-right"></i> Outstanding reliability</li>
+                <li><i class="fa fa-angle-right"></i> State-of-the-art Data Center</li>
+                <li><i class="fa fa-angle-right"></i> Money Back Guarantee</li>
+                <li><i class="fa fa-angle-right"></i> 24/7 Support</li>
+			</ul>
+           	  
+        </div><!-- end section -->
+        
+        
+        <div class="one_fourth last">
+        
+        	<h3>Have any Questions</h3>
+            
+            <div class="any_questions">
+                <img src="http://placehold.it/55x50" alt="" />
+                <p>If you have any questions, feel free to call us toll-free</p>
+                <div class="clearfix mar_top1"></div>
+                <h3><i>Toll-free:</i>  1-234-567-8900</h3>
+            </div>
+            
+            <div class="live_chat">
+            <a href="#"><img src="images/chat-icon.png" alt="" /></a>
+            <h2><a href="#">live chat <i>with our agents</i></a></h2>
+            </div>
+           	  
+        </div><!-- end section -->
+          
+    </div>
+    
+    <div class="footer_sectwo">
+    
+    	<div class="container">
+        
+        	<div class="free_scripts">
+            	
+                <h4>Free 1-Click Script Installs!</h4>
+                
+                <ul>
+                	<li><img src="http://placehold.it/38x38" alt="" /></li>
+                    <li><img src="http://placehold.it/38x38" alt="" /></li>
+                    <li><img src="http://placehold.it/38x38" alt="" /></li>
+                    <li><img src="http://placehold.it/38x38" alt="" /></li>
+                    <li><img src="http://placehold.it/38x38" alt="" /></li>
+                    <li><img src="http://placehold.it/38x38" alt="" /></li>
+                    <li><img src="http://placehold.it/38x38" alt="" /></li>
+                </ul>
+                
+            </div><!-- end free script installs -->
+            
+            <div class="payments_list">
+            
+            	<h4>Payments We&nbsp;Accept</h4>
+                
+                <ul>
+                	<li><img src="http://placehold.it/50x33" alt="" /></li>
+                    <li><img src="http://placehold.it/50x33" alt="" /></li>
+                    <li><img src="http://placehold.it/50x33" alt="" /></li>
+                    <li><img src="http://placehold.it/50x33" alt="" /></li>
+                    <li><img src="http://placehold.it/50x33" alt="" /></li>
+                    <li><img src="http://placehold.it/50x33" alt="" /></li>
+                </ul>
+            
+            </div><!-- end payments accept -->
+        
+        </div>
+    
     </div>
 
-    <!-- style switcher
-    ================================================== -->
-    <script src="js/switcher.js"></script>
-    
+</div>
 
+<div class="clearfix"></div>
+
+<div class="copyright_info">
+
+    <div class="container">
+    
+        <div class="one_half">
+        
+            <b>Copyright © 2013 ainexhost.com. All rights reserved.  <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></b>
+            
+        </div>
+    
+    	<div class="one_half last">
+     		
+            <ul class="footer_social_links">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                <li><a href="#"><i class="fa fa-html5"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            </ul>
+                
+    	</div>
+    
+    </div>
+    
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Footer
+======================================= -->
+
+
+
+<a href="#" class="scrollup">Scroll</a><!-- end scroll to top of the page-->
+
+
+
+ 
+</div>
+</div>
+
+    
+<!-- ######### JS FILES ######### -->
+<!-- get jQuery from the google apis -->
+<script type="text/javascript" src="js/universal/jquery.js"></script>
+
+<!-- style switcher -->
+<script src="js/style-switcher/jquery-1.js"></script>
+<script src="js/style-switcher/styleselector.js"></script>
+
+<!-- main menu -->
+<script type="text/javascript" src="js/mainmenu/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="js/mainmenu/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/mainmenu/selectnav.js"></script>
+
+<script type="text/javascript" src="js/mainmenu/scripts.js"></script>
+
+<!-- scroll up -->
+<script type="text/javascript">
+    $(document).ready(function(){
+ 
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+ 
+        $('.scrollup').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+ 
+    });
+</script>
+
+
+<script type="text/javascript" src="js/sticky-menu/core.js"></script>
 
 </body>
 </html>
