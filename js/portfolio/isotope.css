@@ -13,11 +13,9 @@
 }
 .portfolioFilter a:hover {
 	color: #fff;
-	background-color: #ff8100;
 }
 .portfolioFilter a.current {
 	color: #fff;
-	background-color: #ff8100;
 }
 
 .portfolioContainer {

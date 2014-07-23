@@ -27,8 +27,8 @@
  
 <div class="page_title">
 	<div class="container">
-		<div class="title"><h1>Pricing Tables</h1></div>
-        <div class="pagenation">&nbsp;<a href="index.html">Home</a> <i>/</i> <a href="#">Features</a> <i>/</i> Pricing Tables</div>
+		<div class="title"><h1>Hosting</h1></div>
+        <div class="pagenation">&nbsp;<a href="index.php">Inicio</a> <i>/</i> Hosting</div>
 	</div>
 </div><!-- end page title --> 
 
@@ -44,13 +44,12 @@
     
 	        <div class="pricing-tables-main">
             
-            <h2><strong>Example with</strong> 3 Columns</h2>
             <div class="mar_top3"></div>
             <div class="clearfix"></div>
             
             <div class="pricing-tables-two">
-            	<div class="title">Economy</div>
-                <div class="price">$3.99 <i>/ per month</i></div>
+            	<div class="title">Económico</div>
+                <div class="price">S/. 150.00 <i>/ por año</i></div>
 
                 <div class="cont-list">
 
@@ -65,13 +64,13 @@
                         <li class="last">100 Email Addresses</li>
                     </ul>
                 </div>
-                <div class="ordernow"><a href="#" class="normalbut">Order Now</a></div>
+                <div class="ordernow"><a href="#" class="normalbut">Ordenalo ahora</a></div>
             </div><!-- end section -->
 
                
             <div class="pricing-tables-helight-two">
-            	<div class="title">Standard</div>
-                <div class="price">$9.99 <i>/ per month</i></div>
+            	<div class="title">Básico</div>
+                <div class="price">S/. 180.00 <i>/ por año</i></div>
                 <div class="cont-list">
                 	<ul>
                     	<li>Unlimited Bandwidth</li>
@@ -83,13 +82,13 @@
                         <li class="last">1000 Email Addresses</li>
                     </ul>
                 </div>
-                <div class="ordernow"><a href="#" class="colorchan">Order Now</a></div>
+                <div class="ordernow"><a href="#" class="colorchan">Ordenalo ahora</a></div>
             </div><!-- end section -->
             
             
             <div class="pricing-tables-two">
-            	<div class="title">Professional</div>
-                <div class="price">$18.99 <i>/ per month</i></div>
+            	<div class="title">Corporativo</div>
+                <div class="price">S/. 250.00 <i>/ por año</i></div>
                 <div class="cont-list">
                 	<ul>
                     	<li>Unlimited Bandwidth</li>
@@ -101,7 +100,7 @@
                         <li class="last">Unlimited &nbsp; Emails</li>
                     </ul>
                 </div>
-                <div class="ordernow"><a href="#" class="normalbut">Order Now</a></div>
+                <div class="ordernow"><a href="#" class="normalbut">Ordenalo ahora</a></div>
             </div><!-- end section -->
  
            </div><!-- end pricing tables with 3 columns -->

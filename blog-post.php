@@ -28,7 +28,7 @@
 <div class="page_title">
 	<div class="container">
 		<div class="title"><h1>Single Post</h1></div>
-        <div class="pagenation">&nbsp;<a href="index.html">Home</a> <i>/</i> <a href="#">Blog</a> <i>/</i> Single Post</div>
+        <div class="pagenation">&nbsp;<a href="index.php">Home</a> <i>/</i> <a href="#">Blog</a> <i>/</i> Single Post</div>
 	</div>
 </div><!-- end page title --> 
 

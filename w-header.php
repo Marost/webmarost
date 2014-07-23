@@ -33,40 +33,13 @@
 
                             <ul id="tiny">
 
-                                <li><a href="index.php" class="active">Home</a></li>
-                                <li><a href="standard-hosting.html">Web Hosting<i class="fa fa-angle-down"></i></a>
-                                    <ul>
-                                        <li><a href="standard-hosting.html">Standard Hosting</a></li>
-                                        <li><a href="professional-hosting.html">Professional Hosting</a></li>
-                                        <li><a href="advanced-hosting.html">Advanced Hosting</a></li>
-                                        <li><a href="unlimited-hosting.html">Unlimited Hosting</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Features<i class="fa fa-angle-down"></i></a>
-
-                                    <ul>
-                                        <li><a href="about-page.php">About Page Style 2</a></li>
-                                        <li><a href="pricing-tables.php">Pricing Tables</a></li>
-                                        <li><a href="testimonials.php">Testimonials</a></li>
-                                        <li><a href="faqs.php">FAQs</a></li>
-                                        <li><a href="#">Portfolio Pages ></a>
-                                            <ul>
-                                                <li><a href="portfolio-one.php">Single Image</a></li>
-                                                <li><a href="portfolio-five.php">Portfolio Fancy</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="404.php">404 Error Page</a></li>
-                                    </ul>
-
-
-                                </li>
-                                <li><a href="services.php">Services</a></li>
-                                <li><a href="blog.php">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul>
-                                        <li><a href="blog-post.php">Single post</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.php">Contact</a></li>
+                                <li><a href="index.php" class="active">Inicio</a></li>
+                                <li><a href="about-page.php">Nosotros</a></li>
+                                <li><a href="pricing-tables.php">Hosting</a></li>
+                                <li><a href="portfolio-five.php">Portafolio</a></li>
+                                <li><a href="services.php">Servicios</a></li>
+                                <li><a href="blog.php">Blog</a></li>
+                                <li><a href="contact.php">Contacto</a></li>
 
                             </ul>
 

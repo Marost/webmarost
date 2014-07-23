@@ -32,7 +32,7 @@ $w_fancybox=true;
 <div class="page_title">
 	<div class="container">
 		<div class="title"><h1>Portfolio Fancy</h1></div>
-        <div class="pagenation">&nbsp;<a href="index.html">Home</a> <i>/</i> <a href="#">Features</a> <i>/</i> Portfolio Fancy</div>
+        <div class="pagenation">&nbsp;<a href="index.php">Home</a> <i>/</i> <a href="#">Features</a> <i>/</i> Portfolio Fancy</div>
 	</div>
 </div><!-- end page title --> 
 
@@ -50,52 +50,195 @@ $w_fancybox=true;
     
 		<div class="portfolioFilter">
         
-            <a href="#" data-filter="*" class="current">All</a>
-            <a href="#" data-filter=".places">Places</a>
-            <a href="#" data-filter=".house">House</a>
-            <a href="#" data-filter=".objects">Objects</a>
+            <a href="#" data-filter="*" class="current">Tddo</a>
+            <a href="#" data-filter=".hosting">Hosting</a>
+            <a href="#" data-filter=".web">Diseño Web</a>
+            <a href="#" data-filter=".movil">Diseño Web Movil</a>
         
         </div>
 
 		<div class="clearfix mar_top5"></div>
 
-
         <div class="portfolioContainer">
         
-            <div class="house">
-                <a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Publishing has packages and More text can be use here"><div class="imgWrap"><img src="http://placehold.it/800x450" alt="" /><p class="imgDescription"><i class="icon-search icon-4x"></i></p><h3>Publishing has packages</h3></div></a>
-            </div>	
-        
-            <div class="objects">
-                <a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Typesetting industry and More text can be use here"><div class="imgWrap"><img src="http://placehold.it/800x450" alt="" /><p class="imgDescription"><i class="icon-search icon-4x"></i></p><h3>Typesetting industry</h3></div></a>
+            <div class="hosting web movil">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Pichling Sports Marketing</h3>
+                    </div>
+                </a>
             </div>
-            
-            <div class="house objects">
-                <a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Standard dummy text and More text can be use here"><div class="imgWrap"><img src="http://placehold.it/800x450" alt="" /><p class="imgDescription"><i class="icon-search icon-4x"></i></p><h3>Standard dummy text</h3></div></a>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Femip</h3>
+                    </div>
+                </a>
             </div>
-        
-            <div class="places objects">
-                <a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Passages more recently and More text can be use here"><div class="imgWrap"><img src="http://placehold.it/800x450" alt="" /><p class="imgDescription"><i class="icon-search icon-4x"></i></p><h3>Passages more recently</h3></div></a>
+
+            <div class="hosting">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Martin Alvarado</h3>
+                    </div>
+                </a>
             </div>
-        
-            <div class="objects">
-                <a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Letrasets containing and More text can be use here"><div class="imgWrap"><img src="http://placehold.it/800x450" alt="" /><p class="imgDescription"><i class="icon-search icon-4x"></i></p><h3>Letrasets containing</h3></div></a>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Pichling Representaciones</h3>
+                    </div>
+                </a>
             </div>
-        
-            <div class="places objects">
-                <a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="sentence structures and More text can be use here"><div class="imgWrap"><img src="http://placehold.it/800x450" alt="" /><p class="imgDescription"><i class="icon-search icon-4x"></i></p><h3>Sentence structures</h3></div></a>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>JPD Contratistas Generales</h3>
+                    </div>
+                </a>
             </div>
-            
-            <div class="places objects">
-                <a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="sentence structures and More text can be use here"><div class="imgWrap"><img src="http://placehold.it/800x450" alt="" /><p class="imgDescription"><i class="icon-search icon-4x"></i></p><h3>Professor structures</h3></div></a>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>QG Consultora</h3>
+                    </div>
+                </a>
             </div>
-              
-            <div class="house objects">
-                <a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="sentence structures and More text can be use here"><div class="imgWrap"><img src="http://placehold.it/800x450" alt="" /><p class="imgDescription"><i class="icon-search icon-4x"></i></p><h3>Classical literature</h3></div></a>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Soquitex</h3>
+                    </div>
+                </a>
             </div>
-               
-            <div class="places objects">
-                <a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="sentence structures and More text can be use here"><div class="imgWrap"><img src="http://placehold.it/800x450" alt="" /><p class="imgDescription"><i class="icon-search icon-4x"></i></p><h3>Many web sites</h3></div></a>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Salón Perú</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Ubilla Reformas</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Jurecpi Export</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Yasuda Tours</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hosting web">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Fain Metal</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hosting">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Grupo 7 Perú</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hosting">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Club Hebraica Perú</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hosting">
+                <a class="fancybox" href="http://placehold.it/800x450"
+                   data-fancybox-group="gallery"
+                   title="Publishing has packages and More text can be use here">
+                    <div class="imgWrap">
+                        <img src="http://placehold.it/800x450" alt="" />
+                        <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
+                        <h3>Osher Marketing</h3>
+                    </div>
+                </a>
             </div>
                           
         </div>
