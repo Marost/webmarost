@@ -22,10 +22,10 @@
             <div class="container">
 
                 <!-- Logo -->
-                <div class="one_fourth"><a href="index.html" id="logo"></a></div>
+                <div class="one_third"><a href="index.php" id="logo"></a></div>
 
                 <!-- Menu -->
-                <div class="three_fourth last">
+                <div class="two_third last">
 
                     <nav id="access" class="access" role="navigation">
 

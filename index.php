@@ -25,10 +25,6 @@
 
         <div class="clearfix"></div>
 
-        <?php require_once("w-slider.php"); ?>
-
-        <div class="clearfix"></div>
-
         <?php require_once("w-slider-info.php"); ?>
 
         <div class="clearfix mar_top4"></div>
@@ -43,25 +39,9 @@
 
         <?php require_once("w-hosting-incluye.php"); ?>
 
+        <?php require_once("w-clientes-hor.php"); ?>
+
         <div class="divider_line4"></div>
-
-        <div class="bottom_section">
-
-            <div class="container">
-
-                <?php require_once("w-hosting-empezar.php"); ?>
-
-                <?php require_once("w-clientes-dice.php"); ?>
-
-            </div>
-
-            <?php require_once("w-clientes-hor.php"); ?>
-
-            <div class="clearfix"></div>
-
-            <?php require_once("w-twitter-hor.php"); ?>
-
-        </div><!-- end bottom section -->
 
         <div class="wave_graphs"></div>
 

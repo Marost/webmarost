@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <div class="one_fourth">
+        <div class="one_third">
 
             <h3>Support/Help</h3>
 
@@ -22,7 +22,7 @@
 
         </div><!-- end section -->
 
-        <div class="one_fourth">
+        <div class="one_third">
 
             <h3>Recent Blog Posts</h3>
 
@@ -49,7 +49,7 @@
 
         </div><!-- end section -->
 
-        <div class="one_fourth">
+        <div class="one_third last">
 
             <h3>Transfer Your Site</h3>
 
@@ -68,24 +68,6 @@
 
         </div><!-- end section -->
 
-        <div class="one_fourth last">
-
-            <h3>Have any Questions</h3>
-
-            <div class="any_questions">
-                <img src="http://placehold.it/55x50" alt="" />
-                <p>If you have any questions, feel free to call us toll-free</p>
-                <div class="clearfix mar_top1"></div>
-                <h3><i>Toll-free:</i>  1-234-567-8900</h3>
-            </div>
-
-            <div class="live_chat">
-                <a href="#"><img src="images/chat-icon.png" alt="" /></a>
-                <h2><a href="#">live chat <i>with our agents</i></a></h2>
-            </div>
-
-        </div><!-- end section -->
-
     </div>
 
 </div>
@@ -98,7 +80,7 @@
 
         <div class="one_half">
 
-            <b>Copyright © 2013 ainexhost.com. All rights reserved.  <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></b>
+            <b>Copyright © 2013 Marost S.A.C.</b>
 
         </div>
 
@@ -107,13 +89,7 @@
             <ul class="footer_social_links">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                 <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                <li><a href="#"><i class="fa fa-flickr"></i></a></li>
-                <li><a href="#"><i class="fa fa-html5"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-rss"></i></a></li>
             </ul>
 
         </div>
