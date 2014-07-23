@@ -1,10 +1,6 @@
-<!-- ######### JS FILES ######### -->
+
 <!-- get jQuery from the google apis -->
 <script type="text/javascript" src="js/universal/jquery.js"></script>
-
-<!-- style switcher -->
-<script src="js/style-switcher/jquery-1.js"></script>
-<script src="js/style-switcher/styleselector.js"></script>
 
 <!-- main menu -->
 <script type="text/javascript" src="js/mainmenu/ddsmoothmenu.js"></script>
@@ -153,6 +149,7 @@
 <!-- accordion -->
 <script type="text/javascript" src="js/accordion/custom.js"></script>
 
+<?php if($w_fancybox==true){ ?>
 <!-- fancyBox -->
 <script type="text/javascript" src="js/portfolio/lib/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="js/portfolio/source/jquery.fancybox.js"></script>
@@ -211,3 +208,4 @@
 
     });
 </script>
+<?php } ?>

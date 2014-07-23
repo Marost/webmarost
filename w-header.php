@@ -33,7 +33,7 @@
 
                             <ul id="tiny">
 
-                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="index.php" class="active">Home</a></li>
                                 <li><a href="standard-hosting.html">Web Hosting<i class="fa fa-angle-down"></i></a>
                                     <ul>
                                         <li><a href="standard-hosting.html">Standard Hosting</a></li>
@@ -45,21 +45,13 @@
                                 <li><a href="#">Features<i class="fa fa-angle-down"></i></a>
 
                                     <ul>
-                                        <li><a href="standard-page.html">Standard/About Page</a></li>
-                                        <li><a href="about-page.html">About Page Style 2</a></li>
-                                        <li><a href="typography.html">Typography</a></li>
-                                        <li><a href="elements.html">Elements</a></li>
-                                        <li><a href="pricing-tables.html">Pricing Tables</a></li>
-                                        <li><a href="columns.html">Page Columns</a></li>
+                                        <li><a href="about-page.php">About Page Style 2</a></li>
+                                        <li><a href="pricing-tables.php">Pricing Tables</a></li>
                                         <li><a href="testimonials.html">Testimonials</a></li>
                                         <li><a href="faqs.html">FAQs</a></li>
-                                        <li><a href="tabs.html">Tabs</a></li>
                                         <li><a href="#">Portfolio Pages ></a>
                                             <ul>
                                                 <li><a href="portfolio-one.html">Single Image</a></li>
-                                                <li><a href="portfolio-two.html">2 Columns</a></li>
-                                                <li><a href="portfolio-three.html">3 Columns</a></li>
-                                                <li><a href="portfolio-four.html">4 Columns</a></li>
                                                 <li><a href="portfolio-five.html">Portfolio Fancy</a></li>
                                             </ul>
                                         </li>
@@ -73,7 +65,7 @@
 
 
                                 </li>
-                                <li><a href="services.html">Services</a></li>
+                                <li><a href="services.php">Services</a></li>
                                 <li><a href="blog.html">Blog<i class="fa fa-angle-down"></i></a>
                                     <ul>
                                         <li><a href="blog.html">with Large image</a></li>
@@ -81,7 +73,6 @@
                                         <li><a href="blog-post.html">Single post</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="support.html">Support</a></li>
                                 <li><a href="contact.php">Contact</a></li>
 
                             </ul>
