@@ -88,45 +88,6 @@
 
     </div>
 
-    <div class="footer_sectwo">
-
-        <div class="container">
-
-            <div class="free_scripts">
-
-                <h4>Free 1-Click Script Installs!</h4>
-
-                <ul>
-                    <li><img src="http://placehold.it/38x38" alt="" /></li>
-                    <li><img src="http://placehold.it/38x38" alt="" /></li>
-                    <li><img src="http://placehold.it/38x38" alt="" /></li>
-                    <li><img src="http://placehold.it/38x38" alt="" /></li>
-                    <li><img src="http://placehold.it/38x38" alt="" /></li>
-                    <li><img src="http://placehold.it/38x38" alt="" /></li>
-                    <li><img src="http://placehold.it/38x38" alt="" /></li>
-                </ul>
-
-            </div><!-- end free script installs -->
-
-            <div class="payments_list">
-
-                <h4>Payments We&nbsp;Accept</h4>
-
-                <ul>
-                    <li><img src="http://placehold.it/50x33" alt="" /></li>
-                    <li><img src="http://placehold.it/50x33" alt="" /></li>
-                    <li><img src="http://placehold.it/50x33" alt="" /></li>
-                    <li><img src="http://placehold.it/50x33" alt="" /></li>
-                    <li><img src="http://placehold.it/50x33" alt="" /></li>
-                    <li><img src="http://placehold.it/50x33" alt="" /></li>
-                </ul>
-
-            </div><!-- end payments accept -->
-
-        </div>
-
-    </div>
-
 </div>
 
 <div class="clearfix"></div>

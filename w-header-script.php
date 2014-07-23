@@ -58,3 +58,9 @@
 <!-- fancyBox -->
 <link rel="stylesheet" type="text/css" href="js/portfolio/source/jquery.fancybox.css" media="screen" />
 <link rel="stylesheet" href="js/portfolio/isotope.css">
+
+<!-- faqs -->
+<link rel="stylesheet" href="js/accordion/accordion.css" type="text/css" media="all">
+
+<!-- tab widget -->
+<link rel="stylesheet" type="text/css" href="js/tabs/tabwidget/tabwidget.css" />

@@ -47,30 +47,23 @@
                                     <ul>
                                         <li><a href="about-page.php">About Page Style 2</a></li>
                                         <li><a href="pricing-tables.php">Pricing Tables</a></li>
-                                        <li><a href="testimonials.html">Testimonials</a></li>
-                                        <li><a href="faqs.html">FAQs</a></li>
+                                        <li><a href="testimonials.php">Testimonials</a></li>
+                                        <li><a href="faqs.php">FAQs</a></li>
                                         <li><a href="#">Portfolio Pages ></a>
                                             <ul>
-                                                <li><a href="portfolio-one.html">Single Image</a></li>
-                                                <li><a href="portfolio-five.html">Portfolio Fancy</a></li>
+                                                <li><a href="portfolio-one.php">Single Image</a></li>
+                                                <li><a href="portfolio-five.php">Portfolio Fancy</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="full-width.html">Full Width Page</a></li>
-                                        <li><a href="left-sidebar.html">Left Sidebar Page</a></li>
-                                        <li><a href="right-sidebar.html">Right Sidebar Page</a></li>
-                                        <li><a href="left-nav.html">Left Navigation</a></li>
-                                        <li><a href="right-nav.html">Right Navigation</a></li>
-                                        <li><a href="404.html">404 Error Page</a></li>
+                                        <li><a href="404.php">404 Error Page</a></li>
                                     </ul>
 
 
                                 </li>
                                 <li><a href="services.php">Services</a></li>
-                                <li><a href="blog.html">Blog<i class="fa fa-angle-down"></i></a>
+                                <li><a href="blog.php">Blog<i class="fa fa-angle-down"></i></a>
                                     <ul>
-                                        <li><a href="blog.html">with Large image</a></li>
-                                        <li><a href="blog-2.html">with Small image</a></li>
-                                        <li><a href="blog-post.html">Single post</a></li>
+                                        <li><a href="blog-post.php">Single post</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact.php">Contact</a></li>
