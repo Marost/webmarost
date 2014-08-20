@@ -4,9 +4,6 @@
         <ul>
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-rss"></i></a></li>
         </ul>
 
     </div>
@@ -36,7 +33,7 @@
                                 <li><a href="index.php" class="active">Inicio</a></li>
                                 <li><a href="about-page.php">Nosotros</a></li>
                                 <li><a href="pricing-tables.php">Hosting</a></li>
-                                <li><a href="portfolio-five.php">Portafolio</a></li>
+                                <li><a href="portafolio.php">Portafolio</a></li>
                                 <li><a href="services.php">Servicios</a></li>
                                 <li><a href="blog.php">Blog</a></li>
                                 <li><a href="contact.php">Contacto</a></li>
