@@ -22,9 +22,14 @@ $tags=$_POST["tags"];
 if($tags==""){ $union_tags=0; }
 elseif($tags<>""){ $union_tags=implode(",", $tags);}
 
-//SUBIR IMAGEN
-$imagen=$_POST["uploader_0_tmpname"];
-$imagen_carpeta=fechaCarpeta()."/";
+//RECORTAR IMAGEN
+if($_POST["uploader_0_tmpname"]<>""){
+    $imagen=$_POST["uploader_0_tmpname"];
+    $imagen_carpeta=fechaCarpeta()."/";
+    $thumb=PhpThumbFactory::create("../../../imagenes/upload/".$imagen_carpeta."".$imagen."");
+    $thumb->adaptiveResize(370,250);
+    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumb/".$imagen."", "jpg");
+}
 
 //INSERTANDO DATOS
 $rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_portafolio (url, titulo, 
