@@ -1,4 +1,3 @@
-
 <!-- get jQuery from the google apis -->
 <script type="text/javascript" src="js/universal/jquery.js"></script>
 
@@ -7,38 +6,9 @@
 <script type="text/javascript" src="js/mainmenu/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/mainmenu/selectnav.js"></script>
 
+<?php if($w_jcarousel==true){ ?>
 <!-- jquery jcarousel -->
 <script type="text/javascript" src="js/jcarousel/jquery.jcarousel.min.js"></script>
-
-<!-- REVOLUTION SLIDER -->
-<script type="text/javascript" src="js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-
-<script type="text/javascript" src="js/mainmenu/scripts.js"></script>
-
-<!-- tabs script -->
-<script type="text/javascript" src="js/tabs/tabs.js"></script>
-
-<!-- scroll up -->
-<script type="text/javascript">
-    $(document).ready(function(){
-
-        $(window).scroll(function(){
-            if ($(this).scrollTop() > 100) {
-                $('.scrollup').fadeIn();
-            } else {
-                $('.scrollup').fadeOut();
-            }
-        });
-
-        $('.scrollup').click(function(){
-            $("html, body").animate({ scrollTop: 0 }, 500);
-            return false;
-        });
-
-    });
-</script>
-
-<!-- jquery jcarousel -->
 <script type="text/javascript">
 
     jQuery(document).ready(function() {
@@ -56,13 +26,12 @@
     jQuery(document).ready(function() {
         jQuery('#mycarouselfour').jcarousel();
     });
-
 </script>
+<?php } ?>
 
-<!-- accordion -->
-<script type="text/javascript" src="js/accordion/custom.js"></script>
-
+<?php if($w_rslider==true){ ?>
 <!-- REVOLUTION SLIDER -->
+<script type="text/javascript" src="js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript">
 
     var tpj=jQuery;
@@ -129,9 +98,40 @@
 
 
 </script>
+<?php } ?>
 
-<script type="text/javascript" src="js/sticky-menu/core.js"></script>
+<?php if($w_tabs==true){ ?>
+<!-- tabs script -->
+<script type="text/javascript" src="js/tabs/tabwidget/tabwidget.js"></script>
+<script type="text/javascript" src="js/mainmenu/scripts.js"></script>
+<?php } ?>
 
+<!-- scroll up -->
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+
+        $('.scrollup').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+
+    });
+</script>
+
+<?php if($w_accordion==true){ ?>
+<!-- accordion -->
+<script type="text/javascript" src="js/accordion/custom.js"></script>
+<?php } ?>
+
+<?php if($w_testimonial==true){ ?>
 <!-- testimonials -->
 <script type="text/javascript">//<![CDATA[
     $(window).load(function(){
@@ -143,22 +143,37 @@
             })
         });
     });//]]>
-
 </script>
-
-<!-- accordion -->
-<script type="text/javascript" src="js/accordion/custom.js"></script>
+<?php } ?>
 
 <?php if($w_fancybox==true){ ?>
 <!-- fancyBox -->
 <script type="text/javascript" src="js/portfolio/lib/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="js/portfolio/source/jquery.fancybox.js"></script>
 <script type="text/javascript" src="js/portfolio/source/helpers/jquery.fancybox-media.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        /* Simple image gallery. Uses default settings */
+        $('.fancybox').fancybox();
 
+        /* media effects*/
+        $(document).ready(function() {
+            $('.fancybox-media').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                helpers : {
+                    media : {}
+                }
+            });
+        });
+
+    });
+</script>
+<?php } ?>
+
+<?php if($w_isotope==true){ ?>
 <!-- isotope -->
 <script src="js/portfolio/jquery.isotope.js" type="text/javascript"></script>
-
-<!-- isotope -->
 <script type="text/javascript">
     $(window).load(function(){
         var $container = $('.portfolioContainer');
@@ -188,24 +203,6 @@
         });
     });
 </script>
-
-<!-- fancyBox -->
-<script type="text/javascript">
-    $(document).ready(function() {
-        /* Simple image gallery. Uses default settings */
-        $('.fancybox').fancybox();
-
-        /* media effects*/
-        $(document).ready(function() {
-            $('.fancybox-media').fancybox({
-                openEffect  : 'none',
-                closeEffect : 'none',
-                helpers : {
-                    media : {}
-                }
-            });
-        });
-
-    });
-</script>
 <?php } ?>
+
+<script type="text/javascript" src="js/sticky-menu/core.js"></script>
