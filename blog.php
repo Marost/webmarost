@@ -1,3 +1,29 @@
+<?php
+//CONEXION
+require_once("panel@marost/conexion/conexion.php");
+require_once("panel@marost/conexion/funciones.php");
+
+//VARIABLES
+$url_web=$web."blog";
+
+//WIDGETS
+$w_jcarousel=true;
+$w_tabs=true;
+
+################################################################
+//PAGINACION DE NOTICIAS
+require("libs/pagination/class_pagination.php");
+
+//INICIO DE PAGINACION
+$page           = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
+$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM mrt_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC;", $conexion);
+$row            = mysql_fetch_assoc($rst_noticias);
+$generated      = intval($row['count']);
+$pagination     = new Pagination("6", $generated, $page, $url_web."?page", 1, 0);
+$start          = $pagination->prePagination();
+$rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
+
+?>
 <!doctype html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
@@ -41,216 +67,56 @@
 <div class="container">
 
 <div class="content_left">
-        	
-    <div class="blog_post">	
+
+    <?php while($fila_nota=mysql_fetch_array($rst_noticias)){
+            $Nota_id=$fila_nota["id"];
+            $Nota_url=$fila_nota["url"];
+            $Nota_titulo=$fila_nota["titulo"];
+            $Nota_contenido_corto=$fila_nota["contenido_corto"];
+            $Nota_imagen=$fila_nota["imagen"];
+            $Nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
+
+            //URLS
+            $Nota_UrlWeb=$web."nota/".$Nota_id."-".$Nota_url;
+            $Nota_UrlImg=$web."imagenes/upload/".$Nota_imagen_carpeta."thumb/".$Nota_imagen;
+    ?>
+    <div class="blog_post">
+
         <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive.html" class="date"><strong>18</strong><i>November</i></a>
-        <h3><a href="blog-post.html">Lorem simply dummy text of the industry</a></h3>
-            <ul class="post_meta_links_small">
-                <li class="post_by"><a href="#">Harris jo</a></li>
-                <li class="post_categoty"><a href="#">Web tutorials</a></li>
-                <li class="post_comments"><a href="#">18 Comments</a></li>
-            </ul>
+
+            <div class="image_frame small">
+                <a href="<?php echo $Nota_UrlWeb; ?>">
+                    <img src="<?php echo $Nota_UrlImg; ?>" alt="<?php echo $Nota_titulo; ?>" />
+                </a>
+            </div>
+
+            <div class="post_info_content_small">
+                <a href="blog-archive.html" class="date"><strong>18</strong><i>November</i></a>
+                <h3><a href="<?php echo $Nota_UrlWeb; ?>"><?php echo $Nota_titulo; ?></a></h3>
+                <ul class="post_meta_links_small">
+                    <li class="post_by"><a href="#">Harris jo</a></li>
+                    <li class="post_categoty"><a href="#">Web tutorials</a></li>
+                    <li class="post_comments"><a href="#">18 Comments</a></li>
+                </ul>
             
-         <div class="clearfix"></div>
+                <div class="clearfix"></div>
         
-        <p>There are many variations passages of available but theses in majority have suffered alteration in some form injecte humou or randomised words which don't looks even slightly believable embarrassing hidden in the middle.</p>
+            <p><?php echo $Nota_contenido_corto; ?></p>
         
+            </div>
+
         </div>
-        </div>
+
     </div><!-- /# end post -->
     
     <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="video_frame small"><iframe src="http://www.youtube.com/embed/4mu0Gh8GVfU"></iframe></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive.html" class="date"><strong>17</strong><i>November</i></a>
-        <h3><a href="blog-post.html">There are many variations passages</a></h3>
-            <ul class="post_meta_links_small">
-                <li class="post_by"><a href="#">Adam</a></li>
-                <li class="post_categoty"><a href="#">Photography</a></li>
-                <li class="post_comments"><a href="#">12 Comments</a></li>
-            </ul>
-         
-         <div class="clearfix"></div>
-            
-        <p>There are many variations passages of available but theses in majority have suffered alteration in some form injecte humou or randomised words which don't looks even slightly believable embarrassing hidden in the middle.</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive.html" class="date"><strong>16</strong><i>November</i></a>
-        <h3><a href="blog-post.html">Lorem Ipsum passage and going through</a></h3>
-            <ul class="post_meta_links_small">
-                <li class="post_by"><a href="#">Adams</a></li>
-                <li class="post_categoty"><a href="#">WP Themes</a></li>
-                <li class="post_comments"><a href="#">10 Comments</a></li>
-            </ul>
-         
-        <div class="clearfix"></div>
-        
-        <p>There are many variations passages of available but theses in majority have suffered alteration in some form injecte humou or randomised words which don't looks even slightly believable embarrassing hidden in the middle.</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive.html" class="date"><strong>15</strong><i>November</i></a>
-    
-        <h3><a href="blog-post.html">Injected humour words</a></h3>
-            <ul class="post_meta_links_small">
-                <li class="post_by"><a href="#">Harrison</a></li>
-                <li class="post_categoty"><a href="#">Web tutorials</a></li>
-                <li class="post_comments"><a href="#">18 Comments</a></li>
-            </ul>
-         
-         <div class="clearfix"></div>
-        
-        <p>There are many variations passages of available but theses in majority have suffered alteration in some form injecte humou or randomised words which don't looks even slightly believable embarrassing hidden in the middle.</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive.html" class="date"><strong>14</strong><i>November</i></a>
-        <h3><a href="blog-post.html">Latin words comined handful of mode</a></h3>
-            <ul class="post_meta_links_small">
-                <li class="post_by"><a href="#">Harrison</a></li>
-                <li class="post_categoty"><a href="#">Web tutorials</a></li>
-                <li class="post_comments"><a href="#">18 Comments</a></li>
-            </ul>
-         
-        <div class="clearfix"></div>
-        
-        <p>There are many variations passages of available but theses in majority have suffered alteration in some form injecte humou or randomised words which don't looks even slightly believable embarrassing hidden in the middle.</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive.html" class="date"><strong>13</strong><i>November</i></a>
-        <h3><a href="blog-post.html">Latin words comined handful of mode</a></h3>
-            <ul class="post_meta_links_small">
-                <li class="post_by"><a href="#">Harrison</a></li>
-                <li class="post_categoty"><a href="#">Web tutorials</a></li>
-                <li class="post_comments"><a href="#">18 Comments</a></li>
-            </ul>
-         
-        <div class="clearfix"></div>
-        
-        <p>There are many variations passages of available but theses in majority have suffered alteration in some form injecte humou or randomised words which don't looks even slightly believable embarrassing hidden in the middle.</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive.html" class="date"><strong>12</strong><i>November</i></a>
-        <h3><a href="blog-post.html">Latin words comined handful of mode</a></h3>
-            <ul class="post_meta_links_small">
-                <li class="post_by"><a href="#">Harrison</a></li>
-                <li class="post_categoty"><a href="#">Web tutorials</a></li>
-                <li class="post_comments"><a href="#">18 Comments</a></li>
-            </ul>
-         
-        <div class="clearfix"></div>
-        
-        <p>There are many variations passages of available but theses in majority have suffered alteration in some form injecte humou or randomised words which don't looks even slightly believable embarrassing hidden in the middle.</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive.html" class="date"><strong>11</strong><i>November</i></a>
-        <h3><a href="blog-post.html">Latin words comined handful of mode</a></h3>
-            <ul class="post_meta_links_small">
-                <li class="post_by"><a href="#">Harrison</a></li>
-                <li class="post_categoty"><a href="#">Web tutorials</a></li>
-                <li class="post_comments"><a href="#">18 Comments</a></li>
-            </ul>
-         
-        <div class="clearfix"></div>
-        
-        <p>There are many variations passages of available but theses in majority have suffered alteration in some form injecte humou or randomised words which don't looks even slightly believable embarrassing hidden in the middle.</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive.html" class="date"><strong>10</strong><i>November</i></a>
-        <h3><a href="blog-post.html">Latin words comined handful of mode</a></h3>
-            <ul class="post_meta_links_small">
-                <li class="post_by"><a href="#">Harrison</a></li>
-                <li class="post_categoty"><a href="#">Web tutorials</a></li>
-                <li class="post_comments"><a href="#">18 Comments</a></li>
-            </ul>
-         
-        <div class="clearfix"></div>
-        
-        <p>There are many variations passages of available but theses in majority have suffered alteration in some form injecte humou or randomised words which don't looks even slightly believable embarrassing hidden in the middle.</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
+
+    <?php } ?>
+
     <div class="pagination">
-    <b>Page 2 of 18</b>
-    <a href="#" class="navlinks">&lt; Previous</a>
-        <a href="#" class="navlinks">1</a>
-        <a href="#" class="navlinks current">2</a>
-        <a href="#" class="navlinks">3</a>
-        <a href="#" class="navlinks">4</a>
-        <a href="#" class="navlinks">Next ></a>
+        <?php $pagination->pagination(); ?>
     </div><!-- end pagination -->
-        
+
 </div><!-- end content left side area -->
 
 
@@ -389,171 +255,7 @@
 	</div><!-- end section -->
     
     <div class="clearfix mar_top5"></div>
-    
-    <div class="sidebar_widget">
-    
-    	<div class="sidebar_title"><h3>Portfolio <i>Widget</i></h3></div>
-        
-        <div class="portfolio_sidebar_widget">
-        
-        	<ul id="mycarouseltwo" class="jcarousel-skin-tango">
-          
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>Many Variations Available</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>Suffered has Alteration</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>The Randomised Words</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>Themes even Believable</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>Suspendisse Suscipit</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
 
-          </ul>
-          
-		</div>
-                  
-	</div><!-- end section -->
-    
-	<div class="clearfix mar_top5"></div>
-    
-   	<div class="sidebar_widget">
-    
-    	<div class="sidebar_title"><h3>Site <i>Advertisements</i></h3></div>
-        
-			<ul class="adsbanner-list">  
-            	<li><a href="#"><img src="images/sample-ad-banner.jpg" alt="" /></a></li>
-                <li class="last"><a href="#"><img src="images/sample-ad-banner.jpg" alt="" /></a></li>
-            </ul>
-                 
-           	<ul class="adsbanner-list">  
-            	<li><a href="#"><img src="images/sample-ad-banner.jpg" alt="" /></a></li>
-            	<li class="last"><a href="#"><img src="images/sample-ad-banner.jpg" alt="" /></a></li>
-           	</ul>
-            
-	</div><!-- end section -->
-    
-	<div class="clearfix mar_top4"></div>
-    
 	<div class="sidebar_widget">
     
     	<div class="sidebar_title"><h3>Site <i>Archives</i></h3></div>

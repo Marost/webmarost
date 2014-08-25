@@ -1,3 +1,30 @@
+<?php
+//CONEXION
+require_once("panel@marost/conexion/conexion.php");
+require_once("panel@marost/conexion/funciones.php");
+
+//VARIABLES
+$Req_Id=$_REQUEST["id"];
+$Req_Url=$_REQUEST["url"];
+
+//NOTICIA
+$rst_nota=mysql_query("SELECT * FROM mrt_noticia WHERE id=$Req_Id AND url='$Req_Url' AND publicar=1 AND fecha_publicacion<='$fechaActual'", $conexion);
+$fila_nota=mysql_fetch_array($rst_nota);
+
+//VARIABLES
+$Nota_id=$fila_nota["id"];
+$Nota_url=$fila_nota["url"];
+$Nota_titulo=$fila_nota["titulo"];
+$Nota_contenido_corto=$fila_nota["contenido_corto"];
+$Nota_contenido=$fila_nota["contenido"];
+$Nota_imagen=$fila_nota["imagen"];
+$Nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
+$Nota_tags=$fila_nota["tags"];
+
+//URLS
+$Nota_UrlImg=$web."imagenes/upload/".$Nota_imagen_carpeta."".$Nota_imagen;
+$Nota_UrlWeb=$web."nota/".$Nota_id."-".$Nota_url;
+?>
 <!doctype html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
@@ -44,9 +71,11 @@
         	
     <div class="blog_post">	
         <div class="blog_postcontent">
-        <div class="image_frame"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
+        <div class="image_frame">
+            <img src="<?php echo $Nota_UrlImg; ?>" alt="" />
+        </div>
         <a href="blog-archive.html" class="date"><strong>18</strong><i>November</i></a>
-        <h3><a href="blog-post.html">Lorem simply dummy text of the industry</a></h3>
+        <h3><?php echo $Nota_titulo; ?></h3>
             <ul class="post_meta_links">
                 <li class="post_by"><a href="#">Adam Harrison</a></li>
                 <li class="post_categoty"><a href="#">Web tutorials</a></li>
@@ -54,7 +83,7 @@
             </ul>
          
         <div class="post_info_content">
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+        <?php echo $Nota_contenido; ?>
         </div>
         </div>
     </div><!-- /# end post -->
@@ -94,149 +123,24 @@
     </div><!-- end about author -->
     
     <div class="clearfix mar_top5"></div>
-    
-    <div class="one_half"> 
-    <div class="popular-posts-area">
-    <h4><i>Recent Posts</i></h4>
-        <ul class="recent_posts_list">
-            <li>
-                <span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-                <a href="#">Many desktop uncure publish package webpages simple</a>
-                 <i>November 18, 2013</i> 
-            </li>
-            
-            <li>
-                <span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-                <a href="#">Many desktop uncure publish package webpages simple</a>
-                 <i>November 17, 2013</i> 
-            </li>
-            
-            <li>
-                <span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-                <a href="#">Many desktop uncure publish package webpages simple</a>
-                 <i>November 16, 2013</i> 
-            </li>
-        </ul>
-        
-    </div>
-    </div><!-- end recent posts -->
-    
-    
-    <div class="one_half last"> 
-    <div class="popular-posts-area">
-    <h4><i>Popular Posts</i></h4>
-        <ul class="recent_posts_list">
-            <li>
-                <span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-                <a href="#">Many desktop uncure publish package webpages simple</a>
-                 <i>November 09, 2013</i> 
-            </li>
-            
-            <li>
-                <span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-                <a href="#">Many desktop uncure publish package webpages simple</a>
-                 <i>November 08, 2013</i> 
-            </li>
-            
-            <li>
-                <span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-                <a href="#">Many desktop uncure publish package webpages simple</a>
-                 <i>November 07, 2013</i> 
-            </li>
-        </ul>
-        
-    </div>
-    </div><!-- end popular posts -->
-    
-    <div class="clearfix divider_line"></div>
-    
-    <h4><i>Comments</i></h4>
-    <div class="mar_top_bottom_lines_small3"></div>
-    <div class="comment_wrap">
-    <div class="gravatar"><img src="images/blog/people_img.jpg" alt="" /></div>
-    <div class="comment_content">
-        <div class="comment_meta">
-    
-            <div class="comment_author">Admin - <i>November 12, 2013</i></div>                   
-            
-        </div>
-        <div class="comment_text">
-            <p>Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage.</p>
-            <a href="#">Reply</a>
-        </div>
-    </div>
-    </div><!-- end section -->
-    
-    <div class="comment_wrap chaild">
-    <div class="gravatar"><img src="images/blog/people_img.jpg" alt="" /></div>
-    <div class="comment_content">
-        <div class="comment_meta">
-    
-            <div class="comment_author">Admin - <i>November 12, 2013</i></div>                   
-            
-        </div>
-        <div class="comment_text">
-            <p>Lorem ipsum dolor sit amet, consectetur rius a auctor enim accumsan.</p>
-            <a href="#">Reply</a>
-        </div>
-    </div>
-    </div><!-- end section -->
-    
-    <div class="comment_wrap chaild">
-    <div class="gravatar"><img src="images/blog/people_img.jpg" alt="" /></div>
-    <div class="comment_content">
-        <div class="comment_meta">
-    
-            <div class="comment_author">Admin - <i>November 12, 2013</i></div>                   
-            
-        </div>
-        <div class="comment_text">
-            <p>Lorem ipsum dolor sit amet, consectetur rius a auctor enim accumsan.</p>
-            <a href="#">Reply</a>
-        </div>
-    </div>
-    </div><!-- end section -->
-    
-    <div class="comment_wrap chaild">
-    <div class="gravatar"><img src="images/blog/people_img.jpg" alt="" /></div>
-    <div class="comment_content">
-        <div class="comment_meta">
-    
-            <div class="comment_author">Admin - <i>November 12, 2013</i></div>                   
-            
-        </div>
-        <div class="comment_text">
-            <p>Lorem ipsum dolor sit amet, consectetur rius a auctor enim accumsan.</p>
-            <a href="#">Reply</a>
-        </div>
-    </div>
-    </div><!-- end section -->
-    
-    
+
     <div class="comment_form">
-    
-    <h4><i>Leave a Comment</i></h4>
-    
-    <form action="blog-post.html" method="post">
-            <input type="text" name="yourname" id="name" class="comment_input_bg" />
-            <label for="name">Name*</label>
-            
-            <input type="text" name="email" id="mail" class="comment_input_bg" />
-            <label for="mail">Mail*</label>
-            
-            <input type="text" name="website" id="website" class="comment_input_bg" />
-            <label for="website">Website</label>
-            
-            <textarea name="comment" class="comment_textarea_bg" rows="20" cols="7" ></textarea>
-            <div class="clearfix"></div> 
-            <input name="send" type="submit" value="Submit Comment" class="comment_submit"/>
-            <p></p>
-            <p class="comment_checkbox"><input type="checkbox" name="check" /> Notify me of followup comments via e-mail</p>
-        
-        
-    </form>
-    
-    </div><!-- end comment form -->
+        <h4><i>Comentarios</i></h4>
+
+        <div id="fb-root"></div>
+
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=254111618131678&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <div class="fb-comments" data-href="<?php echo $Nota_UrlWeb; ?>" data-numposts="5" data-colorscheme="light"></div>
+    </div>
     
     <div class="clearfix mar_top2"></div>  
             
@@ -378,152 +282,6 @@
 	</div><!-- end section -->
     
     <div class="clearfix mar_top5"></div>
-    
-    <div class="sidebar_widget">
-    
-    	<div class="sidebar_title"><h3>Portfolio <i>Widget</i></h3></div>
-        
-        <div class="portfolio_sidebar_widget">
-        
-        	<ul id="mycarouseltwo" class="jcarousel-skin-tango">
-          
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>Many Variations Available</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>Suffered has Alteration</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>The Randomised Words</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>Themes even Believable</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">  
-                                    <a href="#">
-                                        <img src="http://placehold.it/275x250" alt="">
-                                        <div class="info">
-                                            <h1>Suspendisse Suscipit</h1>
-                                            <h2>There are many variations passages</h2>
-                                            <div class="additionnal">
-                                                 <b>View Project</b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                    </a>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-
-          </ul>
-          
-		</div>
-                  
-	</div><!-- end section -->
-    
-	<div class="clearfix mar_top5"></div>
     
    	<div class="sidebar_widget">
     
