@@ -35,7 +35,7 @@
                                 <li><a href="pricing-tables.php">Hosting</a></li>
                                 <li><a href="portafolio.php">Portafolio</a></li>
                                 <li><a href="services.php">Servicios</a></li>
-                                <li><a href="blog.php">Blog</a></li>
+                                <li><a href="blog">Blog</a></li>
                                 <li><a href="contact.php">Contacto</a></li>
 
                             </ul>
