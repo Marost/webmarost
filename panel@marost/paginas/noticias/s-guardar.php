@@ -23,7 +23,14 @@ elseif($tags<>""){ $union_tags=implode(",", $tags);}
 
 //SUBIR IMAGEN
 $imagen=$_POST["uploader_0_tmpname"];
-$imagen_carpeta=fechaCarpeta()."/";
+
+if($imagen<>""){
+    $imagen_carpeta=fechaCarpeta()."/";
+    $imagen=$_POST['uploader_0_tmpname'];
+    $thumb=PhpThumbFactory::create("../../../imagenes/upload/".$imagen_carpeta."".$imagen."");
+    $thumb->adaptiveResize(358,160);
+    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumb/".$imagen."", "jpg");
+}
 
 //INSERTANDO DATOS
 $rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_noticia (url, titulo, 
