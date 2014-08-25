@@ -53,6 +53,7 @@
 
 <!-- tabs css -->
 <link rel="stylesheet" type="text/css" href="js/tabs/tabs.css" />
+<link rel="stylesheet" type="text/css" href="js/tabs/tabwidget/tabwidget.css" />
 
 <!-- testimonials -->
 <link rel="stylesheet" href="js/testimonials/fadeeffect.css" type="text/css" media="all">
@@ -63,6 +64,3 @@
 
 <!-- faqs -->
 <link rel="stylesheet" href="js/accordion/accordion.css" type="text/css" media="all">
-
-<!-- tab widget -->
-<link rel="stylesheet" type="text/css" href="js/tabs/tabwidget/tabwidget.css" />
