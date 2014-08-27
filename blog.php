@@ -31,12 +31,12 @@ $rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fe
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
 
 <head>
-	<title>Ainex - A Professional Hosting Theme</title>
-	
-	<meta charset="utf-8">
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-    
+    <title>Ainex - A Professional Hosting Theme</title>
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
     <?php require_once("w-header-script.php"); ?>
 
 </head>
@@ -45,243 +45,99 @@ $rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fe
 
 <div class="wrapper_boxed">
 
-<div class="site_wrapper">
+    <div class="site_wrapper">
 
-<?php require_once("w-header.php"); ?>
+        <?php require_once("w-header.php"); ?>
 
-<div class="clearfix"></div>
- 
-<div class="page_title">
-	<div class="container">
-		<div class="title"><h1>Small Image</h1></div>
-        <div class="pagenation">&nbsp;<a href="index.php">Home</a> <i>/</i> <a href="#">Blog</a> <i>/</i> Small Image</div>
-	</div>
-</div><!-- end page title --> 
+        <div class="clearfix"></div>
 
-<div class="clearfix"></div>
-
-
-<!-- Contant
-======================================= -->
-
-<div class="container">
-
-<div class="content_left">
-
-    <?php while($fila_nota=mysql_fetch_array($rst_noticias)){
-            $Nota_id=$fila_nota["id"];
-            $Nota_url=$fila_nota["url"];
-            $Nota_titulo=$fila_nota["titulo"];
-            $Nota_contenido_corto=$fila_nota["contenido_corto"];
-            $Nota_imagen=$fila_nota["imagen"];
-            $Nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
-
-            //URLS
-            $Nota_UrlWeb=$web."nota/".$Nota_id."-".$Nota_url;
-            $Nota_UrlImg=$web."imagenes/upload/".$Nota_imagen_carpeta."thumb/".$Nota_imagen;
-    ?>
-    <div class="blog_post">
-
-        <div class="blog_postcontent">
-
-            <div class="image_frame small">
-                <a href="<?php echo $Nota_UrlWeb; ?>">
-                    <img src="<?php echo $Nota_UrlImg; ?>" alt="<?php echo $Nota_titulo; ?>" />
-                </a>
+        <div class="page_title">
+            <div class="container">
+                <div class="title"><h1>Blog</h1></div>
+                <div class="pagenation">&nbsp;<a href="/">Inicio</a> <i>/</i> Blog</div>
             </div>
+        </div><!-- end page title -->
 
-            <div class="post_info_content_small">
-                <a href="blog-archive.html" class="date"><strong>18</strong><i>November</i></a>
-                <h3><a href="<?php echo $Nota_UrlWeb; ?>"><?php echo $Nota_titulo; ?></a></h3>
-                <ul class="post_meta_links_small">
-                    <li class="post_by"><a href="#">Harris jo</a></li>
-                    <li class="post_categoty"><a href="#">Web tutorials</a></li>
-                    <li class="post_comments"><a href="#">18 Comments</a></li>
-                </ul>
-            
-                <div class="clearfix"></div>
-        
-            <p><?php echo $Nota_contenido_corto; ?></p>
-        
-            </div>
-
-        </div>
-
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-
-    <?php } ?>
-
-    <div class="pagination">
-        <?php $pagination->pagination(); ?>
-    </div><!-- end pagination -->
-
-</div><!-- end content left side area -->
+        <div class="clearfix"></div>
 
 
-<!-- right sidebar starts -->
-<div class="right_sidebar">
+        <!-- Contant
+        ======================================= -->
 
-	<div class="site-search-area">
-    
-        <form method="get" id="site-searchform" action="blog.html">
-        <div>
-        <input class="input-text" name="s" id="s" value="Enter Search keywords..." onFocus="if (this.value == 'Enter Search keywords...') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Enter Search keywords...';}" type="text" />
-        <input id="searchsubmit" value="Search" type="submit" />
-        </div>
-        </form>
-        
-	</div><!-- end site search -->
-    
-    <div class="clearfix mar_top4"></div>
+        <div class="container">
 
-	<div class="sidebar_widget">
-    
-    	<div class="sidebar_title"><h3>Site <i>Categories</i></h3></div>
-		<ul class="arrows_list1">		
-            <li><a href="#"><i class="fa fa-angle-right"></i> Website Design</a></li>
-            <li><a href="#"><i class="fa fa-angle-right"></i> Make Money Online</a></li>
-            <li><a href="#"><i class="fa fa-angle-right"></i> Photography</a></li>
-            <li><a href="#"><i class="fa fa-angle-right"></i> Wordpress Themes</a></li>
-            <li><a href="#"><i class="fa fa-angle-right"></i> Learn Web Tutorials</a></li>
-		</ul>
-        
-	</div><!-- end section -->
-    
-    <div class="clearfix mar_top4"></div>
-    
-    <div class="sidebar_widget">
-    
-    	<div id="tabs">
-        
-			<ul class="tabs">  
-				<li class="active"><a href="#tab1">Popular</a></li>
-				<li><a href="#tab2">Recent</a></li>
-				<li class="last"><a href="#tab3">Tags</a></li>
-			</ul><!-- /# end tab links --> 
- 
-		<div class="tab_container">	
-			<div id="tab1" class="tab_content"> 
-            
-				<ul class="recent_posts_list">
-					<li>
-					  	<span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-						<a href="#">Publishing packag esanse web page editos</a>
-						 <i>November 09, 2013</i> 
-					</li>	
-					<li>
-					  	<span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-						<a href="#">Sublishing packag esanse web page editos</a>
-						 <i>November 08, 2013</i> 
-					</li>	
-					<li class="last">
-					  	<span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-						<a href="#">Mublishing packag esanse web page editos</a>
-						 <i>November 07, 2013</i> 
-					</li>
-				</ul>
-                 
-			</div><!-- end popular posts --> 
-			
-			<div id="tab2" class="tab_content">	 
-				<ul class="recent_posts_list">
-                
-					<li>
-					  	<span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-						<a href="#">Various versions has evolved over the years</a>
-						 <i>November 18, 2013</i> 
-					</li>
-					<li>
-					  	<span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-						<a href="#">Rarious versions has evolve over the years</a>
-						 <i>November 17, 2013</i> 
-					</li>
-					<li class="last">
-					  	<span><a href="#"><img src="http://placehold.it/50x50" alt="" /></a></span>
-						<a href="#">Marious versions has evolven over the years</a>
-						 <i>November 16, 2013</i> 
-					</li>
-				</ul>
-                 
-			</div><!-- end popular articles -->	
-			
-			<div id="tab3" class="tab_content">	 
-				<ul class="tags">
-														
-					<li><a href="#">2013</a></li>
-					<li><a href="#"><b>Amazing</b></a></li>
-					<li><a href="#">Animation</a></li>
-					<li><a href="#">Beautiful</a></li>
-					<li><a href="#"><b>Cartoon</b></a></li>
-					<li><a href="#">Comedy</a></li>
-					<li><a href="#"><b>Cool</b></a></li>
-					<li><a href="#">Dance</a></li>
-					<li><a href="#">Drive</a></li>
-					<li><a href="#"><b>Family</b></a></li>
-					<li><a href="#"><b>Fantasy</b></a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#"><b>Friends</b></a></li>
-					<li><a href="#">Funny</a></li>
-					<li><a href="#"><b>Games</b></a></li>
-					<li><a href="#">Love</a></li>
-					<li><a href="#"><b>Music</b></a></li>
-					<li><a href="#">Nature</a></li>
-					<li><a href="#"><b>Party</b></a></li>
-					<li><a href="#">Pictures</a></li>
-					<li><a href="#">Sports</a></li>
-					<li><a href="#"><b>Best</b></a></li>
-					<li><a href="#">Wedding</a></li>
-					<li><a href="#">Weight</a></li>
-					<li><a href="#"><b>Youtube</b></a></li>
-				</ul>	 
-			</div>
- 			
-		</div>
-		
-		</div>
-                
-	</div><!-- end section -->
-    
-    <div class="clearfix mar_top5"></div>
-    
-    <div class="clientsays_widget">
-    
-    	<div class="sidebar_title"><h3>Happy <i>Client Say's</i></h3></div>
-        
-        <img src="http://placehold.it/50x50" alt="" />
-<strong>- Henry Brodie</strong><p>Lorem Ipsum passage, and going through the cites of the word here classical literature passage discovered undou btable source. which looks reasonable of the generated charac eristic words.</p>  
-                
-	</div><!-- end section -->
-    
-    <div class="clearfix mar_top5"></div>
+            <div class="content_left">
 
-	<div class="sidebar_widget">
-    
-    	<div class="sidebar_title"><h3>Site <i>Archives</i></h3></div>
-        
-		<ul class="arrows_list1">		
-            <li><a href="#"><i class="fa fa-angle-right"></i> November 2013</a></li>
-            <li><a href="#"><i class="fa fa-angle-right"></i> October 2013</a></li>
-            <li><a href="#"><i class="fa fa-angle-right"></i> September 2013</a></li>
-            <li><a href="#"><i class="fa fa-angle-right"></i> August 2013</a></li>
-            <li><a href="#"><i class="fa fa-angle-right"></i> July 2013</a></li>
-		</ul>
-        
-	</div><!-- end section -->
+                <?php while($fila_nota=mysql_fetch_array($rst_noticias)){
+                    $Nota_id=$fila_nota["id"];
+                    $Nota_url=$fila_nota["url"];
+                    $Nota_titulo=$fila_nota["titulo"];
+                    $Nota_contenido_corto=$fila_nota["contenido_corto"];
+                    $Nota_categoria=$fila_nota["categoria"];
+                    $Nota_imagen=$fila_nota["imagen"];
+                    $Nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
+                    $Nota_fecha=$fila_nota["fecha_publicacion"];
 
-	
-</div>
+                    //URLS
+                    $Nota_UrlWeb=$web."nota/".$Nota_id."-".$Nota_url;
+                    $Nota_UrlImg=$web."imagenes/upload/".$Nota_imagen_carpeta."thumb/".$Nota_imagen;
 
+                    //CATEGORIA
+                    $rst_NotCat=mysql_query("SELECT * FROM mrt_noticia_categoria WHERE id=$Nota_categoria", $conexion);
+                    $fila_NotCat=mysql_fetch_array($rst_NotCat);
 
-</div><!-- end content area -->
+                    //VARIABLES
+                    $NotCat_url=$fila_NotCat["url"];
+                    $NotCat_titulo=$fila_NotCat["categoria"];
+                    $NotCat_UrlWeb=$web."categoria/".$NotCat_url;
+                    ?>
+                    <div class="blog_post">
 
+                        <div class="blog_postcontent">
 
-<?php require_once("w-footer-texto.php"); ?>
+                            <div class="image_frame small">
+                                <a href="<?php echo $Nota_UrlWeb; ?>">
+                                    <img src="<?php echo $Nota_UrlImg; ?>" alt="<?php echo $Nota_titulo; ?>" />
+                                </a>
+                            </div>
 
-<?php require_once("w-footer.php"); ?>
- 
-</div>
+                            <div class="post_info_content_small">
+                                <h3><a href="<?php echo $Nota_UrlWeb; ?>"><?php echo $Nota_titulo; ?></a></h3>
+                                <ul class="post_meta_links_small">
+                                    <li class="post_categoty"><a href="<?php echo $NotCat_UrlWeb; ?>"><i class="fa fa-folder-open fa-lg"></i><?php echo $NotCat_titulo; ?></a></li>
+                                    <li class="post_categoty"><i class="fa fa-clock-o fa-lg"></i><?php echo $Nota_fecha; ?></li>
+                                </ul>
+
+                                <div class="clearfix"></div>
+
+                                <p><?php echo $Nota_contenido_corto; ?></p>
+
+                            </div>
+
+                        </div>
+
+                    </div><!-- /# end post -->
+
+                    <div class="clearfix divider_line3"></div>
+
+                <?php } ?>
+
+                <div class="pagination">
+                    <?php $pagination->pagination(); ?>
+                </div><!-- end pagination -->
+
+            </div><!-- end content left side area -->
+
+            <?php require_once("w-sidebar.php"); ?>
+
+        </div><!-- end content area -->
+
+        <?php require_once("w-footer-texto.php"); ?>
+
+        <?php require_once("w-footer.php"); ?>
+
+    </div>
+
 </div>
 
 <?php require_once("w-footer-script.php"); ?>
