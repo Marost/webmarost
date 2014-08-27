@@ -15,9 +15,11 @@ $fila_nota=mysql_fetch_array($rst_nota);
 $nota_nombre=$fila_nota["titulo"];
 $nota_imagen=$fila_nota["imagen"];
 $nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
+$nota_contenido_corto=$fila_nota["contenido_corto"];
 $nota_contenido=$fila_nota["contenido"];
 $nota_palabras_clave=$fila_nota["palabras_clave"];
 $nota_publicar=$fila_nota["publicar"];
+$nota_categoria=$fila_nota["categoria"];
 
 /* FECHA */
 $nota_fecha_pub=explode(" ", $fila_nota["fecha_publicacion"]);
@@ -28,6 +30,9 @@ $nota_pub_hora=$nota_fecha_pub[1];
 $tags=explode(",", $fila_nota["tags"]);    //SEPARACION DE ARRAY CON COMAS
 $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre ASC;", $conexion);
 
+//CATEGORIA
+$rst_cat=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_categoria ORDER BY categoria ASC;", $conexion);
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -37,6 +42,18 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
 <title>Administrador</title>
 
 <?php require_once("../../w-scripts.php"); ?>
+
+<!-- CONTENIDO CORTO -->
+<script type="text/javascript">
+    //LIMITAR COMENTARIO
+    function limitText(limitField, limitCount, limitNum) {
+        if (limitField.value.length > limitNum) {
+            limitField.value = limitField.value.substring(0, limitNum);
+        } else {
+            limitCount.value = limitNum - limitField.value.length;
+        }
+    }
+</script>
 
 </head>
 
@@ -82,6 +99,15 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                     </div>
 
                     <div class="widget">
+                        <div class="whead"><h6>Contenido corto</h6></div>
+                        <textarea id="contenido_corto" name="contenido_corto" onkeydown="limitText(this.form.contenido_corto,this.form.countdown,250);" onkeyup="limitText(this.form.contenido_corto,this.form.countdown,250);">
+                            <?php echo $nota_contenido_corto; ?>
+                        </textarea>
+                        Caracteres permitidos
+                        <strong><input name="countdown" type="text" style="border:none; background:none;" value="250" size="3" readonly id="countdown"></strong>
+                    </div>
+
+                    <div class="widget">
                         <div class="whead"><h6>Contenido</h6></div>
                         <textarea class="ckeditor" name="contenido" /><?php echo $nota_contenido; ?></textarea>
                     </div>
@@ -99,6 +125,25 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                                 <input type="hidden" name="imagen" value="<?php echo $nota_imagen; ?>">
                                 <input type="hidden" name="imagen_carpeta" value="<?php echo $nota_imagen_carpeta; ?>">
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>Categoria:</label></div>
+                        <div class="grid9">
+                            <select name="categoria" class="styled">
+                                <option>Selecciona</option>
+                                <?php while($fila_cat=mysql_fetch_array($rst_cat)){
+                                    $cat_id=$fila_cat["id"];
+                                    $cat_nombre=$fila_cat["categoria"];
+
+                                    if ($nota_categoria==$cat_id){
+                                        ?>
+                                        <option value="<?php echo $cat_id; ?>" selected><?php echo $cat_nombre; ?></option>
+                                    <?php }else{ ?>
+                                        <option value="<?php echo $cat_id; ?>"><?php echo $cat_nombre; ?></option>
+                                    <?php }} ?>
+                            </select>
                         </div>
                     </div>
 

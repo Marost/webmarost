@@ -11,6 +11,8 @@ $pub_hora=date("H:i:s");
 //ETIQUETAS
 $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre ASC;", $conexion);
 
+//CATEGORIA
+$rst_cat=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_categoria ORDER BY categoria ASC;", $conexion);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,6 +22,18 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
 <title>Administrador</title>
 
 <?php require_once("../../w-scripts.php"); ?>
+
+<!-- CONTENIDO CORTO -->
+<script type="text/javascript">
+    //LIMITAR COMENTARIO
+    function limitText(limitField, limitCount, limitNum) {
+        if (limitField.value.length > limitNum) {
+            limitField.value = limitField.value.substring(0, limitNum);
+        } else {
+            limitCount.value = limitNum - limitField.value.length;
+        }
+    }
+</script>
 
 </head>
 
@@ -66,6 +80,13 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                     </div>
 
                     <div class="widget">
+                        <div class="whead"><h6>Contenido corto</h6></div>
+                        <textarea id="contenido_corto" name="contenido_corto" onkeydown="limitText(this.form.contenido_corto,this.form.countdown,250);" onkeyup="limitText(this.form.contenido_corto,this.form.countdown,250);"></textarea>
+                        Caracteres permitidos
+                        <strong><input name="countdown" type="text" style="border:none; background:none;" value="250" size="3" readonly id="countdown"></strong>
+                    </div>
+
+                    <div class="widget">
                         <div class="whead"><h6>Contenido</h6></div>
                         <textarea class="validate[required] ckeditor" name="contenido" /></textarea>
                     </div>
@@ -76,6 +97,21 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                             <div class="widget nomargin">    
                                 <div id="uploader">Tu navegador no soporta HTML5.</div>                    
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>Categoria:</label></div>
+                        <div class="grid9">
+                            <select name="categoria" class="styled">
+                                <option>Selecciona</option>
+                                <?php while($fila_cat=mysql_fetch_array($rst_cat)){
+                                    $notCat_id=$fila_cat["id"];
+                                    $notCat_nombre=$fila_cat["categoria"];
+                                ?>
+                                    <option value="<?php echo $notCat_id; ?>"><?php echo $notCat_nombre; ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                     </div>
 

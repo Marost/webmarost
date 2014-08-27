@@ -8,7 +8,9 @@ require_once('../../js/plugins/thumbs/ThumbLib.inc.php');
 $nota_id=$_REQUEST["id"];
 $nombre=$_POST["nombre"];
 $url=getUrlAmigable(eliminarTextoURL($nombre));
+$contenido_corto=$_POST["contenido_corto"];
 $contenido=$_POST["contenido"];
+$categoria=$_POST["categoria"];
 $palabras_clave=$_POST["palabras_clave"];
 $tags=$_POST["tags"];
 
@@ -28,21 +30,25 @@ if ($_POST["publicar"]<>""){ $publicar=$_POST["publicar"]; }else{ $publicar=0; }
 //IMAGEN
 if($_POST['uploader_0_tmpname']<>""){
 	$imagen=$_POST["uploader_0_tmpname"];
-	$imagen_carpeta=fechaCarpeta()."/";	
+	$imagen_carpeta=fechaCarpeta()."/";
+    $thumb=PhpThumbFactory::create("../../../imagenes/upload/".$imagen_carpeta."".$imagen."");
+    $thumb->adaptiveResize(358,160);
+    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumb/".$imagen."", "jpg");
 }else{
 	$imagen=$_POST["imagen"];
 	$imagen_carpeta=$_POST["imagen_carpeta"];
 }
 
-
 //INSERTANDO DATOS
-$rst_guardar=mysql_query("UPDATE ".$tabla_suf."_noticia SET url='$url', titulo='".htmlspecialchars($nombre)."', 
+$rst_guardar=mysql_query("UPDATE ".$tabla_suf."_noticia SET url='$url', titulo='".htmlspecialchars($nombre)."',
+    contenido_corto='$contenido_corto',
 	contenido='$contenido', 
 	imagen='$imagen', 
 	imagen_carpeta='$imagen_carpeta', 
 	fecha_publicacion='$fecha_publicacion', 
 	publicar=$publicar, 
 	tags='0,$union_tags,0',
+	categoria='$categoria',
 	palabras_clave='$palabras_clave' WHERE id=$nota_id;", $conexion);
 
 if (mysql_errno()!=0){
