@@ -1,3 +1,4 @@
+<!--
 <div class="footer">
 
     <div class="clearfix mar_top5"></div>
@@ -20,7 +21,7 @@
                 <li><a href="#"><i class="fa fa-angle-right"></i> Hosting Industry News</a></li>
             </ul>
 
-        </div><!-- end section -->
+        </div><!-- end section --
 
         <div class="one_third">
 
@@ -47,7 +48,7 @@
                 </li>
             </ul>
 
-        </div><!-- end section -->
+        </div><!-- end section --
 
         <div class="one_third last">
 
@@ -66,13 +67,14 @@
                 <li><i class="fa fa-angle-right"></i> 24/7 Support</li>
             </ul>
 
-        </div><!-- end section -->
+        </div><!-- end section --
 
     </div>
 
 </div>
 
 <div class="clearfix"></div>
+-->
 
 <div class="copyright_info">
 
@@ -80,7 +82,7 @@
 
         <div class="one_half">
 
-            <b>Copyright © 2013 Marost S.A.C.</b>
+            <b>Copyright © 2014 Marost S.A.C.</b>
 
         </div>
 

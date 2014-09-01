@@ -1,4 +1,8 @@
-<?php 
+<?php
+//CONEXION
+require_once("panel@marost/conexion/conexion.php");
+require_once("panel@marost/conexion/funciones.php");
+
 $name_of_your_site = "yourcompanyname.com"; 
 $email_adress_reciever = "gsrthemes9@gmail.com";
 
@@ -8,14 +12,14 @@ if(isset($_POST['Send']))
 }
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
 
 <head>
-	<title>Ainex - A Professional Hosting Theme</title>
+	<title><?php echo $web_nombre; ?></title>
 	
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />

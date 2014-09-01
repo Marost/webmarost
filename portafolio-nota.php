@@ -18,14 +18,14 @@ $Nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
 $Nota_enlace=$fila_nota["enlace"];
 $Nota_palabras_clave=$fila_nota["palabras_clave"];
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
 
 <head>
-	<title>Ainex - A Professional Hosting Theme</title>
+	<title><?php echo $web_nombre; ?></title>
 	
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />

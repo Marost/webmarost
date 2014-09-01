@@ -1,11 +1,16 @@
-<!doctype html>
+<?php
+//CONEXION
+require_once("panel@marost/conexion/conexion.php");
+require_once("panel@marost/conexion/funciones.php");
+?>
+<!DOCTYPE html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
 
 <head>
-	<title>Ainex - A Professional Hosting Theme</title>
+	<title><?php echo $web_nombre; ?></title>
 	
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
@@ -27,8 +32,8 @@
  
 <div class="page_title">
 	<div class="container">
-		<div class="title"><h1>404 Error Page</h1></div>
-        <div class="pagenation">&nbsp;<a href="index.php">Home</a> <i>/</i> <a href="#">Features</a> <i>/</i> 404 Error Page</div>
+		<div class="title"><h1>Página no encontrada</h1></div>
+        <div class="pagenation">&nbsp;<a href="/">Inicio</a> <i>/</i> Página no encontrada</div>
 	</div>
 </div><!-- end page title --> 
 
@@ -46,15 +51,15 @@
     	
         <strong>404</strong>
         <br />
-    	<b>Oops... Page Not Found!</b>
+    	<b>Uy ... Página no encontrada!</b>
         
-        <em>Sorry the Page Could not be Found here.</em>
+        <em>Lo sentimos la página no pudo ser encontrada aquí.</em>
 
-        <p>Try using the button below to go to main page of the site</p>
+        <p>Trate de usar el botón de abajo para ir a la página principal del sitio.</p>
         
         <div class="clearfix mar_top3"></div>
     	
-        <a href="#" class="but_goback"><i class="fa fa-arrow-circle-left fa-lg"></i>&nbsp; Go to Back</a>
+        <a href="/" class="but_goback"><i class="fa fa-arrow-circle-left fa-lg"></i>&nbsp; Ir a la Página Principal</a>
         
     </div><!-- end error page notfound -->
         

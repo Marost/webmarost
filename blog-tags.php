@@ -35,7 +35,7 @@ $start          = $pagination->prePagination();
 $rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE tags LIKE '%,$Req_Id,%' AND publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
 
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie n  o-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->

@@ -10,14 +10,14 @@ $w_isotope=true;
 //PORTAFOLIO
 $rst_nota=mysql_query("SELECT * FROM mrt_portafolio WHERE publicar=1 ORDER BY titulo ASC", $conexion);
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
 
 <head>
-	<title>Ainex - A Professional Hosting Theme</title>
+	<title><?php echo $web_nombre; ?></title>
 	
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
