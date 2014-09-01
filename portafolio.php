@@ -5,6 +5,7 @@ require_once("panel@marost/conexion/funciones.php");
 
 //VARIABLES
 $w_fancybox=true;
+$w_isotope=true;
 
 //PORTAFOLIO
 $rst_nota=mysql_query("SELECT * FROM mrt_portafolio WHERE publicar=1 ORDER BY titulo ASC", $conexion);
