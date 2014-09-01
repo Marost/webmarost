@@ -299,8 +299,13 @@ FileETag None
 # RewriteBase /
 </IfModule>
 
+#BLOG
 RewriteRule ^blog$                                        /blog.php
 RewriteRule ^nota/([0-9]*)-(.*)$                          /blog-post.php?id=$1&url=$2
+RewriteRule ^categoria/(.*)$                              /blog-categoria.php?url=$1
+RewriteRule ^tags/([0-9]*)-(.*)$                          /blog-tags.php?id=$1&url=$2
+
+#PORTAFOLIO
 RewriteRule ^portafolio$                                  /portafolio.php
 RewriteRule ^portafolio/(.*)$                             /portafolio-nota.php?url=$1
 RewriteRule ^panel@marost/$                               /panel@marost/login.php

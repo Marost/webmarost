@@ -8,8 +8,18 @@ $w_jcarousel=true;
 $w_tabs=true;
 $w_tagsBlog=true;
 
-//VARIABLES
+//VARIABLES DE URL
+$Req_Url=$_REQUEST["url"];
 $url_web=$web."blog";
+
+################################################################
+//CATEGORIA
+$rst_categoria=mysql_query("SELECT * FROM mrt_noticia_categoria WHERE url='$Req_Url'", $conexion);
+$fila_categoria=mysql_fetch_array($rst_categoria);
+
+//VARIABLES
+$Categoria_id=$fila_categoria["id"];
+$Categoria_titulo=$fila_categoria["categoria"];
 
 ################################################################
 //PAGINACION DE NOTICIAS
@@ -17,12 +27,12 @@ require("libs/pagination/class_pagination.php");
 
 //INICIO DE PAGINACION
 $page           = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM mrt_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC;", $conexion);
+$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM mrt_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' AND categoria=$Categoria_id ORDER BY fecha_publicacion DESC;", $conexion);
 $row            = mysql_fetch_assoc($rst_noticias);
 $generated      = intval($row['count']);
 $pagination     = new Pagination("6", $generated, $page, $url_web."?page", 1, 0);
 $start          = $pagination->prePagination();
-$rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
+$rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' AND categoria=$Categoria_id ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
 
 ?>
 <!doctype html>
@@ -32,7 +42,7 @@ $rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fe
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
 
 <head>
-    <title>Blog | <?php echo $web_nombre; ?></title>
+    <title><?php echo $Categoria_titulo." | ".$web_nombre; ?></title>
 
     <meta charset="utf-8">
     <meta name="keywords" content="" />
@@ -54,8 +64,8 @@ $rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fe
 
         <div class="page_title">
             <div class="container">
-                <div class="title"><h1>Blog</h1></div>
-                <div class="pagenation">&nbsp;<a href="/">Inicio</a> <i>/</i> Blog</div>
+                <div class="title"><h1>Blog: <?php echo $Categoria_titulo; ?></h1></div>
+                <div class="pagenation">&nbsp;<a href="/">Inicio</a> <i>/</i> Blog: <?php echo $Categoria_titulo; ?></div>
             </div>
         </div><!-- end page title -->
 
@@ -74,7 +84,6 @@ $rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fe
                     $Nota_url=$fila_nota["url"];
                     $Nota_titulo=$fila_nota["titulo"];
                     $Nota_contenido_corto=$fila_nota["contenido_corto"];
-                    $Nota_categoria=$fila_nota["categoria"];
                     $Nota_imagen=$fila_nota["imagen"];
                     $Nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
                     $Nota_fecha=$fila_nota["fecha_publicacion"];
@@ -83,14 +92,6 @@ $rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fe
                     $Nota_UrlWeb=$web."nota/".$Nota_id."-".$Nota_url;
                     $Nota_UrlImg=$web."imagenes/upload/".$Nota_imagen_carpeta."thumb/".$Nota_imagen;
 
-                    //CATEGORIA
-                    $rst_NotCat=mysql_query("SELECT * FROM mrt_noticia_categoria WHERE id=$Nota_categoria", $conexion);
-                    $fila_NotCat=mysql_fetch_array($rst_NotCat);
-
-                    //VARIABLES
-                    $NotCat_url=$fila_NotCat["url"];
-                    $NotCat_titulo=$fila_NotCat["categoria"];
-                    $NotCat_UrlWeb=$web."categoria/".$NotCat_url;
                     ?>
                     <div class="blog_post">
 
@@ -105,7 +106,6 @@ $rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fe
                             <div class="post_info_content_small">
                                 <h3><a href="<?php echo $Nota_UrlWeb; ?>"><?php echo $Nota_titulo; ?></a></h3>
                                 <ul class="post_meta_links_small">
-                                    <li class="post_categoty"><a href="<?php echo $NotCat_UrlWeb; ?>"><i class="fa fa-folder-open fa-lg"></i><?php echo $NotCat_titulo; ?></a></li>
                                     <li class="post_categoty"><i class="fa fa-clock-o fa-lg"></i><?php echo $Nota_fecha; ?></li>
                                 </ul>
 

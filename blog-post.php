@@ -3,7 +3,10 @@
 require_once("panel@marost/conexion/conexion.php");
 require_once("panel@marost/conexion/funciones.php");
 
-//VARIABLES
+//WIDGETS
+$w_tagsNota=true;
+
+//VARIABLES DE URL
 $Req_Id=$_REQUEST["id"];
 $Req_Url=$_REQUEST["url"];
 
@@ -35,6 +38,10 @@ $fila_NotCat=mysql_fetch_array($rst_NotCat);
 $NotCat_url=$fila_NotCat["url"];
 $NotCat_titulo=$fila_NotCat["categoria"];
 $NotCat_UrlWeb=$web."categoria/".$NotCat_url;
+
+//TAGS
+$tags=explode(",", $Nota_tags);    //SEPARACION DE ARRAY CON COMAS
+$rst_tagsNota=mysql_query("SELECT * FROM mrt_noticia_tags ORDER BY nombre ASC;", $conexion);
 ?>
 <!doctype html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->

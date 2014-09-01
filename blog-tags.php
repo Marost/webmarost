@@ -8,8 +8,18 @@ $w_jcarousel=true;
 $w_tabs=true;
 $w_tagsBlog=true;
 
+//VARIABLES DE URL
+$Req_Id=$_REQUEST["id"];
+$Req_Url=$_REQUEST["url"];
+$url_web=$web."tags/".$Req_Id."-".$Req_Url;
+
+################################################################
+//TAGS
+$rst_tags=mysql_query("SELECT * FROM mrt_noticia_tags WHERE id=$Req_Id", $conexion);
+$fila_tags=mysql_fetch_array($rst_tags);
+
 //VARIABLES
-$url_web=$web."blog";
+$tags_titulo=$fila_tags["nombre"];
 
 ################################################################
 //PAGINACION DE NOTICIAS
@@ -17,22 +27,22 @@ require("libs/pagination/class_pagination.php");
 
 //INICIO DE PAGINACION
 $page           = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM mrt_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC;", $conexion);
+$rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM mrt_noticia WHERE tags LIKE '%,$Req_Id,%' AND publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC;", $conexion);
 $row            = mysql_fetch_assoc($rst_noticias);
 $generated      = intval($row['count']);
 $pagination     = new Pagination("6", $generated, $page, $url_web."?page", 1, 0);
 $start          = $pagination->prePagination();
-$rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
+$rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE tags LIKE '%,$Req_Id,%' AND publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT $start, 6", $conexion);
 
 ?>
 <!doctype html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie n  o-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
 
 <head>
-    <title>Blog | <?php echo $web_nombre; ?></title>
+    <title><?php echo $tags_titulo." | ".$web_nombre; ?></title>
 
     <meta charset="utf-8">
     <meta name="keywords" content="" />
@@ -54,8 +64,8 @@ $rst_noticias   = mysql_query("SELECT * FROM mrt_noticia WHERE publicar=1 AND fe
 
         <div class="page_title">
             <div class="container">
-                <div class="title"><h1>Blog</h1></div>
-                <div class="pagenation">&nbsp;<a href="/">Inicio</a> <i>/</i> Blog</div>
+                <div class="title"><h1>Blog: <?php echo $tags_titulo; ?></h1></div>
+                <div class="pagenation">&nbsp;<a href="/">Inicio</a> <i>/</i> Blog: <?php echo $tags_titulo; ?></div>
             </div>
         </div><!-- end page title -->
 
