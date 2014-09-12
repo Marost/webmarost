@@ -25,18 +25,6 @@
 
 <link rel="stylesheet" href="css/colors/blue.css" />
 
-<!-- just remove the below comments witch bg patterns you want to use -->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-default.css" />-->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-one.css" />-->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-two.css" />-->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-three.css" />-->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-four.css" />-->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-five.css" />-->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-six.css" />-->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-seven.css" />-->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-eight.css" />-->
-<!--<link rel="stylesheet" href="css/bg-patterns/pattern-nine.css" />-->
-
 <!-- sticky menu -->
 <link rel="stylesheet" href="js/sticky-menu/core.css">
 
