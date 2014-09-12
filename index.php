@@ -42,10 +42,6 @@ $w_jcarousel=true;
 
         <div class="clearfix mar_top5"></div>
 
-        <?php require_once("w-hosting-planes.php"); ?>
-
-        <div class="clearfix mar_top5"></div>
-
         <?php require_once("w-hosting-incluye.php"); ?>
 
         <?php require_once("w-clientes-hor.php"); ?>
