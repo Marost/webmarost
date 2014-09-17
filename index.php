@@ -1,10 +1,11 @@
 <?php
 //CONEXION
-require_once("panel@marost/conexion/conexion.php");
-require_once("panel@marost/conexion/funciones.php");
+//require_once("panel@marost/conexion/conexion.php");
+//require_once("panel@marost/conexion/funciones.php");
 
 //WIDGETS
 $w_jcarousel=true;
+$w_rslider=true;
 
 ?>
 <!DOCTYPE html>
@@ -26,33 +27,33 @@ $w_jcarousel=true;
 
 <body>
 
-<div class="wrapper_boxed">
+<div class="site_wrapper">
 
-    <div class="site_wrapper">
+    <?php require_once("w-header.php"); ?>
 
-        <?php require_once("w-header.php"); ?>
+    <div class="clearfix"></div>
 
-        <div class="clearfix"></div>
+    <?php require_once("w-slider.php"); ?>
 
-        <?php require_once("w-slider-info.php"); ?>
+    <div class="clearfix"></div>
 
-        <div class="clearfix mar_top4"></div>
+    <?php require_once("w-slider-info.php"); ?>
 
-        <?php require_once("w-info-web.php"); ?>
+    <div class="clearfix mar_top4"></div>
 
-        <div class="clearfix mar_top5"></div>
+    <?php require_once("w-info-web.php"); ?>
 
-        <?php require_once("w-hosting-incluye.php"); ?>
+    <div class="clearfix mar_top5"></div>
 
-        <?php require_once("w-clientes-hor.php"); ?>
+    <?php require_once("w-hosting-incluye.php"); ?>
 
-        <div class="divider_line4"></div>
+    <?php require_once("w-clientes-hor.php"); ?>
 
-        <div class="wave_graphs"></div>
+    <div class="divider_line4"></div>
 
-        <?php require_once("w-footer.php"); ?>
+    <div class="wave_graphs"></div>
 
-    </div>
+    <?php require_once("w-footer.php"); ?>
 
 </div>
 
