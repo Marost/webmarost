@@ -1,4 +1,4 @@
-<base href="<?php echo $web; ?>"/>
+<base href="<?php // echo $web; ?>"/>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="images/favicon.ico">
@@ -15,40 +15,40 @@
 
 <!-- ######### CSS STYLES ######### -->
 
-<link rel="stylesheet" href="css/reset.css" type="text/css" />
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/reset.css?update=<?php echo date("YmdHi") ?>" type="text/css" />
+<link rel="stylesheet" href="css/style.css?update=<?php echo date("YmdHi") ?>" type="text/css" />
 
-<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css?update=<?php echo date("YmdHi") ?>">
 
 <!-- responsive devices styles -->
-<link rel="stylesheet" media="screen" href="css/responsive-leyouts.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="css/responsive-leyouts.css?update=<?php echo date("YmdHi") ?>" type="text/css" />
 
-<link rel="stylesheet" href="css/colors/blue.css" />
+<link rel="stylesheet" href="css/colors/blue.css?update=<?php echo date("YmdHi") ?>" />
 
 <!-- sticky menu -->
-<link rel="stylesheet" href="js/sticky-menu/core.css">
+<link rel="stylesheet" href="js/sticky-menu/core.css?update=<?php echo date("YmdHi") ?>">
 
 <!-- REVOLUTION SLIDER -->
-<link rel="stylesheet" type="text/css" href="js/revolutionslider/css/fullwidth.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="js/revolutionslider/rs-plugin/css/settings.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="js/revolutionslider/css/fullwidth.css?update=<?php echo date("YmdHi") ?>" media="screen" />
+<link rel="stylesheet" type="text/css" href="js/revolutionslider/rs-plugin/css/settings.css?update=<?php echo date("YmdHi") ?>" media="screen" />
 
 <!-- jquery jcarousel -->
-<link rel="stylesheet" type="text/css" href="js/jcarousel/skin.css" />
-<link rel="stylesheet" type="text/css" href="js/jcarousel/skin2.css" />
+<link rel="stylesheet" type="text/css" href="js/jcarousel/skin.css?update=<?php echo date("YmdHi") ?>" />
+<link rel="stylesheet" type="text/css" href="js/jcarousel/skin2.css?update=<?php echo date("YmdHi") ?>" />
 
 <!-- faqs -->
-<link rel="stylesheet" href="js/accordion/accordion.css" type="text/css" media="all">
+<link rel="stylesheet" href="js/accordion/accordion.css?update=<?php echo date("YmdHi") ?>" type="text/css" media="all">
 
 <!-- tabs css -->
-<link rel="stylesheet" type="text/css" href="js/tabs/tabs.css" />
-<link rel="stylesheet" type="text/css" href="js/tabs/tabwidget/tabwidget.css" />
+<link rel="stylesheet" type="text/css" href="js/tabs/tabs.css?update=<?php echo date("YmdHi") ?>" />
+<link rel="stylesheet" type="text/css" href="js/tabs/tabwidget/tabwidget.css?update=<?php echo date("YmdHi") ?>" />
 
 <!-- testimonials -->
-<link rel="stylesheet" href="js/testimonials/fadeeffect.css" type="text/css" media="all">
+<link rel="stylesheet" href="js/testimonials/fadeeffect.css?update=<?php echo date("YmdHi") ?>" type="text/css" media="all">
 
 <!-- fancyBox -->
-<link rel="stylesheet" type="text/css" href="js/portfolio/source/jquery.fancybox.css" media="screen" />
-<link rel="stylesheet" href="js/portfolio/isotope.css">
+<link rel="stylesheet" type="text/css" href="js/portfolio/source/jquery.fancybox.css?update=<?php echo date("YmdHi") ?>" media="screen" />
+<link rel="stylesheet" href="js/portfolio/isotope.css?update=<?php echo date("YmdHi") ?>">
 
 <!-- faqs -->
-<link rel="stylesheet" href="js/accordion/accordion.css" type="text/css" media="all">
+<link rel="stylesheet" href="js/accordion/accordion.css?update=<?php echo date("YmdHi") ?>" type="text/css" media="all">
