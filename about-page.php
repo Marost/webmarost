@@ -2,6 +2,10 @@
 //CONEXION
 require_once("panel@marost/conexion/conexion.php");
 require_once("panel@marost/conexion/funciones.php");
+
+//WIDGETS
+$w_jcarousel=true;
+$w_rslider=true;
 ?>
 <!DOCTYPE html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
@@ -27,7 +31,10 @@ require_once("panel@marost/conexion/funciones.php");
     <div class="site_wrapper">
    
         <?php require_once("w-header.php"); ?>
-   
+
+        <div class="clearfix"></div>
+
+        <?php require_once("w-slider.php"); ?>
 
         <div class="clearfix"></div>
 
