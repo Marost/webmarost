@@ -4,73 +4,63 @@
 
 /* ----------- Logo ----------- */
 #trueHeader #logo{
-	float:left;
-	display:block;
-	width:100%;
-	height:58px;
-	text-indent:-999em;
+    float:left;
+    display:block;
+    width:100%;
+    height:40px;
+    text-indent:-999em;
 }
-
 
 /*------------------*/
 /*	SITE STRUCTURE
 /*------------------------------------------------------*/
 
-.wrapper_boxed {
-	width: 1240px;
-	margin: auto auto auto auto;
-}
-
 .site_wrapper {
-	width: 1240px;
-	float: left;
-	margin: 0px auto auto auto;
-	background-color: #fff;
-	-webkit-box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-	box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 0 auto 0 auto;
 }
 .container_full {
-	width: 100%;
-	float: left;
-	margin: auto auto auto auto;
+    width: 100%;
+    float: left;
+    margin: auto auto auto auto;
 }
 .container {
-	width: 1170px;
-	margin: auto auto auto auto;
+    width: 1170px;
+    margin: auto auto auto auto;
 }
 
 
 /* columns */
 .one_half, .one_third, .one_fourth, .two_third, .three_fourth, .one_fifth {
-	position: relative;
-	margin-right: 4%;
-	float: left;
+    position: relative;
+    margin-right: 4%;
+    float: left;
 }
 .one_full {
-	width: 100%;
+    width: 100%;
 }
 .one_half {
-	width: 48%;
+    width: 48%;
 }
 .one_third {
-	width: 30.650%;
+    width: 30.650%;
 }
 .one_fourth {
-	width: 22%;
+    width: 22%;
 }
 .one_fifth {
-	width: 16.800%;
+    width: 16.800%;
 }
 .two_third {
-	width: 65.350%;
+    width: 65.350%;
 }
 .three_fourth {
-	width: 74%;
+    width: 74%;
 }
 
 .last {
-	margin-right: 0 !important;
-	clear: right;
+    margin-right: 0 !important;
+    clear: right;
 }
 
 
@@ -661,7 +651,6 @@ ul.footer_social_links {
 .page_title {
 	float: left;
 	width: 100%;
-	margin-top: 100px;
 	padding: 20px 0px;
 	background: #272727 url(../images/bg-texture4.png) repeat left top;
 }
@@ -3839,7 +3828,7 @@ a.knowmore_but:hover {
 /* top section */
 .top_section {
 	float: left;
-	width: 1240px;
+	width: 100%;
 	height: 22px;
 	padding-top: 10px;
 	background-color: #f7f7f7;
