@@ -56,6 +56,27 @@
 
                 </li>
 
+                <!-- SLIDE 3 -->
+                <li data-transition="slideleft" data-slotamount="9" data-thumb="imagenes/slider/pc3.jpg">
+
+                    <img src="imagenes/slider/pc3.jpg" alt="" />
+
+                    <div class="caption lft big_white"  data-x="0" data-y="62" data-speed="900" data-start="1000" data-easing="easeOutExpo">Soporte Técnico</div>
+
+                    <div class="caption lft big_orange"  data-x="4" data-y="140" data-speed="900" data-start="1700" data-easing="easeOutExpo"></div>
+
+                    <div class="caption lfb small_text"  data-x="0" data-y="195" data-speed="900" data-start="2100" data-easing="easeOutExpo"><i class="fa fa-check-circle fa-lg"></i> Instalación de programas actuales</div>
+
+                    <div class="caption lfb small_text"  data-x="0" data-y="235" data-speed="900" data-start="2200" data-easing="easeOutExpo"><i class="fa fa-check-circle fa-lg"></i> Desinfección de virus</div>
+
+                    <div class="caption lfb small_text"  data-x="0" data-y="275" data-speed="900" data-start="2300" data-easing="easeOutExpo"><i class="fa fa-check-circle fa-lg"></i> </div>
+
+                    <div class="caption lfb small_text"  data-x="0" data-y="315" data-speed="900" data-start="2400" data-easing="easeOutExpo"><i class="fa fa-check-circle fa-lg"></i> </div>
+
+                    <div class="caption sfb" data-x="0" data-y="406" data-speed="900" data-start="3400" data-easing="easeOutExpo"><a href="#" class="slider_button1"><i class="fa fa-arrow-right fa-lg"></i> Ver detalles &nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+
+                </li>
+
 
             </ul>
 
