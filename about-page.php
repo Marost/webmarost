@@ -58,9 +58,13 @@ $w_rslider=true;
 
                     <h2><strong>Quiénes</strong> Somos</h2>
 
-                    <p><strong>Lorem Ipsum which looks reasonable generated prempsum is therefore always free from repetition injected words.</strong></p>
+                    <p><strong>Somos una empresa dedicada al rubro de la Informática.</strong></p>
                     <br />
-                    <p>Praesent vestibulum molestie lacus. Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit sociis natoque penatibus et magnis dis parturient montes, nascetur suscipit varius penatibus et magnis dis nascetur ridiculus mus Fusce feugiat malesuada odio. Morbi nunc odio, gravida ate cursus alteration some form montes. Lorem Ipsum available but the majority have suffered alteration in some form, by injected humour, or randomised words which looks desktop publishing packages and web page. </p>
+
+                    <p>Contamos con un personal que busca un desarrollo integral tanto empresarial como personal.</p>
+
+                    <p>Trataremos de satisfacer la necesidad de publicidad, calidad en la administración, operatividad  y la adquisición de conocimientos informáticos  de los Clientes y/o Empresas. Todo ello permitirá como consecuencia mayor productividad para su empresa o institución.</p>
+                    <p>Nuestros servicios van dirigidos a Medianas y Grandes Empresas que busquen publicidad, contando con nuestros servicios de calidad y modernidad en el diseño de Páginas Web, las cuales son adecuadas al medio competitivo actual. Nuestro servicio  también va dirigido a Personas Naturales que buscan obtener promoción o reconocimiento de alguna entidad o simplemente darse a conocer con una página personal, la cual será adaptada al gusto y preferencia del cliente.</p>
 
                 </div><!-- end section -->
 
