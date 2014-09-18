@@ -17,10 +17,10 @@ $pub_hora=$_POST["pub_hora"];
 $fecha_publicacion=$pub_fecha." ".$pub_hora;
 $publicar=1;
 
-//TAGS
-$tags=$_POST["tags"];
-if($tags==""){ $union_tags=0; }
-elseif($tags<>""){ $union_tags=implode(",", $tags);}
+//SERVICIOS
+$servicios=$_POST["servicios"];
+if($servicios==""){ $union_servicios=0; }
+elseif($servicios<>""){ $union_servicios=implode(",", $servicios);}
 
 //RECORTAR IMAGEN
 if($_POST["uploader_0_tmpname"]<>""){
@@ -33,9 +33,9 @@ if($_POST["uploader_0_tmpname"]<>""){
 
 //INSERTANDO DATOS
 $rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_portafolio (url, titulo, 
-	contenido, imagen, imagen_carpeta, fecha_publicacion, publicar, enlace, palabras_clave) 
+	contenido, imagen, imagen_carpeta, fecha_publicacion, publicar, enlace, palabras_clave, servicios)
 VALUES('$url', '".htmlspecialchars($nombre)."', '$contenido', '$imagen', 
-	'$imagen_carpeta', '$fecha_publicacion', $publicar, '$enlace', '$palabras_clave');",$conexion);
+	'$imagen_carpeta', '$fecha_publicacion', $publicar, '$enlace', '$palabras_clave', '0,$union_tags,0');",$conexion);
 
 if (mysql_errno()!=0){
 	echo "ERROR: <strong>".mysql_errno()."</strong> - ". mysql_error();
@@ -45,5 +45,3 @@ if (mysql_errno()!=0){
 	mysql_close($conexion);
 	header("Location:lista.php?msj=ok");
 }
-
-?>

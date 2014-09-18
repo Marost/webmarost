@@ -8,6 +8,9 @@ require_once("../../conexion/verificar_sesion.php");
 $pub_fecha=date("Y-m-d");
 $pub_hora=date("H:i:s");
 
+//PORTAFOLIO
+$rst_porta=mysql_query("SELECT * FROM ".$tabla_suf."_portafolio_servicios ORDER BY titulo ASC;", $conexion);
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -69,7 +72,7 @@ $pub_hora=date("H:i:s");
 
                     <div class="widget">
                         <div class="whead"><h6>Contenido</h6></div>
-                        <textarea class="validate[required] ckeditor" name="contenido" /></textarea>
+                        <textarea class="ckeditor" name="contenido"></textarea>
                     </div>
 
                     <div class="formRow">
@@ -78,6 +81,21 @@ $pub_hora=date("H:i:s");
                             <div class="widget nomargin">    
                                 <div id="uploader">Tu navegador no soporta HTML5.</div>                    
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>Servicios:</label></div>
+                        <div class="grid9">
+
+                            <?php while($fila_porta=mysql_fetch_array($rst_porta)){
+                                    $Porta_id=$fila_porta["id"];
+                                    $Porta_titulo=$fila_porta["titulo"];
+                            ?>
+                            <input type="checkbox" name="servicios[]" value="<?php echo $Porta_id; ?>" />
+                            <label class="mr20"><?php echo $Porta_titulo; ?></label>
+                            <?php } ?>
+
                         </div>
                     </div>
 

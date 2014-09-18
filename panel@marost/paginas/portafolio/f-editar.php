@@ -25,6 +25,10 @@ $nota_fecha_pub=explode(" ", $fila_nota["fecha_publicacion"]);
 $nota_pub_fecha=$nota_fecha_pub[0];
 $nota_pub_hora=$nota_fecha_pub[1];
 
+//PORTAFOLIO - SERVICIOS
+$servicios=explode(",", $fila_nota["servicios"]);    //SEPARACION DE ARRAY CON COMAS
+$rst_porta=mysql_query("SELECT * FROM ".$tabla_suf."_portafolio_servicios ORDER BY titulo ASC;", $conexion);
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -101,6 +105,26 @@ $nota_pub_hora=$nota_fecha_pub[1];
                                 <input type="hidden" name="imagen" value="<?php echo $nota_imagen; ?>">
                                 <input type="hidden" name="imagen_carpeta" value="<?php echo $nota_imagen_carpeta; ?>">
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>Servicios:</label></div>
+                        <div class="grid9">
+
+                            <?php while($fila_porta=mysql_fetch_array($rst_porta)){
+                                $Porta_id=$fila_porta["id"];
+                                $Porta_titulo=$fila_porta["titulo"];
+
+                                if(in_array($Porta_id, $servicios)){
+                            ?>
+                                <input type="checkbox" name="servicios[]" checked value="<?php echo $Porta_id; ?>" />
+                            <?php }else{ ?>
+                                <input type="checkbox" name="servicios[]" value="<?php echo $Porta_id; ?>" />
+                            <?php } ?>
+                                <label class="mr20"><?php echo $Porta_titulo; ?></label>
+                            <?php } ?>
+
                         </div>
                     </div>
 
