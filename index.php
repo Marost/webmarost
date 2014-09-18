@@ -1,7 +1,7 @@
 <?php
 //CONEXION
-//require_once("panel@marost/conexion/conexion.php");
-//require_once("panel@marost/conexion/funciones.php");
+require_once("panel@marost/conexion/conexion.php");
+require_once("panel@marost/conexion/funciones.php");
 
 //WIDGETS
 $w_jcarousel=true;
