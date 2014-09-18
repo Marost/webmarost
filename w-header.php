@@ -2,8 +2,8 @@
     <div class="container">
 
         <ul>
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/marostsac"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/marostsac"><i class="fa fa-twitter"></i></a></li>
         </ul>
 
     </div>
