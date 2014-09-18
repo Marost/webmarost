@@ -26,10 +26,10 @@
                     <div class="caption sfb" data-x="0" data-y="370" data-speed="900" data-start="2700" data-easing="easeOutExpo"><a href="#" class="slider_button1"><i class="fa fa-arrow-right fa-lg"></i> Ver detalles &nbsp;&nbsp;&nbsp;&nbsp;</a></div>
 
                     <div class="caption sfb" data-x="400" data-y="150" data-speed="900" data-start="3000" data-easing="easeOutExpo">
-                        <div class="round1">Paquetes<br /> de<br />Hosting</div>
+                        <div class="round1">Paquetes de<br />Hosting</div>
                     </div>
 
-                    <div class="caption sfb" data-x="455" data-y="215" data-speed="900" data-start="3200" data-easing="easeOutExpo">
+                    <div class="caption sfb" data-x="440" data-y="210" data-speed="900" data-start="3200" data-easing="easeOutExpo">
                         <div class="price">Desde<br /><i>S/.150</i><br />/anual</div>
                     </div>
 
