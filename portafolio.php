@@ -83,7 +83,7 @@ $rst_nota=mysql_query("SELECT * FROM mrt_portafolio WHERE publicar=1 ORDER BY ti
             <div class="hosting web movil">
                 <a class="fancybox" href="<?php echo $Nota_UrlWeb; ?>"
                    data-fancybox-group="gallery"
-                   title="<?php $Nota_titulo; ?>">
+                   title="<?php echo $Nota_titulo; ?>">
                     <div class="imgWrap">
                         <img src="<?php echo $Nota_UrlImg; ?>" alt="" />
                         <p class="imgDescription"><i class="icon-search icon-4x"></i></p>
