@@ -1,4 +1,4 @@
-<base href="<?php // echo $web; ?>"/>
+<base href="<?php //echo $web; ?>"/>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="images/favicon.ico">
@@ -23,7 +23,7 @@
 <!-- responsive devices styles -->
 <link rel="stylesheet" media="screen" href="css/responsive-leyouts.css?update=<?php echo date("YmdHi") ?>" type="text/css" />
 
-<link rel="stylesheet" href="css/colors/blue.css?update=<?php echo date("YmdHi") ?>" />
+<link rel="stylesheet" href="css/blue.css?update=<?php echo date("YmdHi") ?>" />
 
 <!-- sticky menu -->
 <link rel="stylesheet" href="js/sticky-menu/core.css?update=<?php echo date("YmdHi") ?>">
