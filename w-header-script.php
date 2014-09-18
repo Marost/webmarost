@@ -1,4 +1,4 @@
-<base href="<?php //echo $web; ?>"/>
+<base href="<?php echo $web; ?>"/>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="images/favicon.ico">

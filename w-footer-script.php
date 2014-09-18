@@ -6,7 +6,7 @@
 <script type="text/javascript" src="js/mainmenu/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/mainmenu/selectnav.js"></script>
 
-<?php if($w_jcarousel==true){ ?>
+<?php if(isset($w_jcarousel)){ if($w_jcarousel==true){ ?>
 <!-- jquery jcarousel -->
 <script type="text/javascript" src="js/jcarousel/jquery.jcarousel.min.js"></script>
 <script type="text/javascript">
@@ -27,9 +27,9 @@
         jQuery('#mycarouselfour').jcarousel();
     });
 </script>
-<?php } ?>
+<?php }} ?>
 
-<?php if($w_rslider==true){ ?>
+<?php if(isset($w_rslider)){ if($w_rslider==true){ ?>
 <!-- REVOLUTION SLIDER -->
 <script type="text/javascript" src="js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript">
@@ -98,13 +98,13 @@
 
 
 </script>
-<?php } ?>
+<?php }} ?>
 
-<?php if($w_tabs==true){ ?>
+<?php if(isset($w_tabs)){ if($w_tabs==true){ ?>
 <!-- tabs script -->
 <script type="text/javascript" src="js/tabs/tabwidget/tabwidget.js"></script>
 <script type="text/javascript" src="js/mainmenu/scripts.js"></script>
-<?php } ?>
+<?php }} ?>
 
 <!-- scroll up -->
 <script type="text/javascript">
@@ -126,12 +126,12 @@
     });
 </script>
 
-<?php if($w_accordion==true){ ?>
+<?php if(isset($w_accordion)){ if($w_accordion==true){ ?>
 <!-- accordion -->
 <script type="text/javascript" src="js/accordion/custom.js"></script>
 <?php } ?>
 
-<?php if($w_testimonial==true){ ?>
+<?php if(isset($w_testimonial)){ ?>
 <!-- testimonials -->
 <script type="text/javascript">//<![CDATA[
     $(window).load(function(){
@@ -144,9 +144,9 @@
         });
     });//]]>
 </script>
-<?php } ?>
+<?php }} ?>
 
-<?php if($w_fancybox==true){ ?>
+<?php if(isset($w_fancybox)){ if($w_fancybox==true){ ?>
 <!-- fancyBox -->
 <script type="text/javascript" src="js/portfolio/lib/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="js/portfolio/source/jquery.fancybox.js"></script>
@@ -169,9 +169,9 @@
 
     });
 </script>
-<?php } ?>
+<?php }} ?>
 
-<?php if($w_isotope==true){ ?>
+<?php if(isset($w_isotope)){ if($w_isotope==true){ ?>
 <!-- isotope -->
 <script src="js/portfolio/jquery.isotope.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -203,6 +203,6 @@
         });
     });
 </script>
-<?php } ?>
+<?php }} ?>
 
 <script type="text/javascript" src="js/sticky-menu/core.js"></script>

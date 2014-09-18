@@ -1,5 +1,5 @@
-<!-- Slider
-        ======================================= -->
+<?php if(isset($w_rslider)){ if($w_rslider==true){ ?>
+<!-- Slider -->
 
 <div class="container_full">
 
@@ -86,3 +86,4 @@
 
 
 </div><!-- end slider -->
+<?php }} ?>

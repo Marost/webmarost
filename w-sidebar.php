@@ -47,7 +47,7 @@ $rst_TagSb=mysql_query("SELECT * FROM mrt_noticia_tags ORDER BY nombre ASC;", $c
 
     <div class="clearfix mar_top4"></div>
 
-    <?php if($w_tagsNota==true){ ?>
+    <?php if(isset($w_tagsNota)){ if($w_tagsNota==true){ ?>
     <div class="sidebar_widget">
 
         <div id="tabs">
@@ -86,9 +86,9 @@ $rst_TagSb=mysql_query("SELECT * FROM mrt_noticia_tags ORDER BY nombre ASC;", $c
 
     <div class="clearfix mar_top4"></div>
 
-    <?php } ?>
+    <?php }} ?>
 
-    <?php if($w_tagsBlog==true){ ?>
+    <?php if(isset($w_tagsBlog)){ if($w_tagsBlog==true){ ?>
     <div class="sidebar_widget">
 
         <div id="tabs">
@@ -125,6 +125,6 @@ $rst_TagSb=mysql_query("SELECT * FROM mrt_noticia_tags ORDER BY nombre ASC;", $c
         </div>
 
     </div><!-- end section -->
-    <?php } ?>
+    <?php }} ?>
 
 </div>
