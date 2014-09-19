@@ -83,34 +83,11 @@ $rst_portaservicios=mysql_query("SELECT * FROM mrt_portafolio_servicios ORDER BY
                     $Nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
                     $Nota_servicios=$fila_nota["servicios"];
 
-
-
-                    //SEPARAR SERVICIOS
-                    $sepServ1=explode("0,", $Nota_servicios);
-                    $sepServ2=explode(",0", $sepServ1[1]);
-                    $Serv3=count($sepServ2);
-
-                    for($i=1; $i<=$Serv3; $i++){
-
-                        //PORTAFOLIO - SERVICIOS
-                        $rst_servicios=mysql_query("SELECT * FROM mrt_portafolio_servicios WHERE id=$i ORDER BY titulo ASC", $conexion);
-                        $fila_servicios=mysql_fetch_array($rst_servicios);
-
-                        //VARIABLES
-                        $Serv_id=$fila_servicios["id"];
-                        $Serv_url=$fila_servicios["url"]." ";
-
-                        $salida.=$Serv_url;
-
-                    }
-
                     //URL
                     $Nota_UrlWeb=$web."portafolio/".$Nota_url;
                     $Nota_UrlImg=$web."imagenes/upload/".$Nota_imagen_carpeta."thumb/".$Nota_imagen;
-
             ?>
-
-            <div class="<?php echo $salida; ?>">
+            <div class="<?php echo $Nota_servicios; ?>">
                 <a class="fancybox" href="<?php echo $Nota_UrlWeb; ?>"
                    data-fancybox-group="gallery"
                    title="<?php echo $Nota_titulo; ?>">
