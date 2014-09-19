@@ -20,7 +20,7 @@ $publicar=1;
 //SERVICIOS
 $servicios=$_POST["servicios"];
 if($servicios==""){ $union_servicios=0; }
-elseif($servicios<>""){ $union_servicios=implode(",", $servicios);}
+elseif($servicios<>""){ $union_servicios=implode(" ", $servicios);}
 
 //RECORTAR IMAGEN
 if($_POST["uploader_0_tmpname"]<>""){
@@ -35,7 +35,7 @@ if($_POST["uploader_0_tmpname"]<>""){
 $rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_portafolio (url, titulo, 
 	contenido, imagen, imagen_carpeta, fecha_publicacion, publicar, enlace, palabras_clave, servicios)
 VALUES('$url', '".htmlspecialchars($nombre)."', '$contenido', '$imagen', 
-	'$imagen_carpeta', '$fecha_publicacion', $publicar, '$enlace', '$palabras_clave', '0,$union_tags,0');",$conexion);
+	'$imagen_carpeta', '$fecha_publicacion', $publicar, '$enlace', '$palabras_clave', '$union_tags');",$conexion);
 
 if (mysql_errno()!=0){
 	echo "ERROR: <strong>".mysql_errno()."</strong> - ". mysql_error();

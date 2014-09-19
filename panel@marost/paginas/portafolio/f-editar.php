@@ -26,7 +26,7 @@ $nota_pub_fecha=$nota_fecha_pub[0];
 $nota_pub_hora=$nota_fecha_pub[1];
 
 //PORTAFOLIO - SERVICIOS
-$servicios=explode(",", $fila_nota["servicios"]);    //SEPARACION DE ARRAY CON COMAS
+$servicios=explode(" ", $fila_nota["servicios"]);    //SEPARACION DE ARRAY CON COMAS
 $rst_porta=mysql_query("SELECT * FROM ".$tabla_suf."_portafolio_servicios ORDER BY titulo ASC;", $conexion);
 
 ?>
@@ -113,14 +113,14 @@ $rst_porta=mysql_query("SELECT * FROM ".$tabla_suf."_portafolio_servicios ORDER 
                         <div class="grid9">
 
                             <?php while($fila_porta=mysql_fetch_array($rst_porta)){
-                                $Porta_id=$fila_porta["id"];
+                                $Porta_url=$fila_porta["url"];
                                 $Porta_titulo=$fila_porta["titulo"];
 
-                                if(in_array($Porta_id, $servicios)){
+                                if(in_array($Porta_url, $servicios)){
                             ?>
-                                <input type="checkbox" name="servicios[]" checked value="<?php echo $Porta_id; ?>" />
+                                <input type="checkbox" name="servicios[]" checked value="<?php echo $Porta_url; ?>" />
                             <?php }else{ ?>
-                                <input type="checkbox" name="servicios[]" value="<?php echo $Porta_id; ?>" />
+                                <input type="checkbox" name="servicios[]" value="<?php echo $Porta_url; ?>" />
                             <?php } ?>
                                 <label class="mr20"><?php echo $Porta_titulo; ?></label>
                             <?php } ?>

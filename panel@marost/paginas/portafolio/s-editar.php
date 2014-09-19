@@ -21,7 +21,7 @@ $fecha_publicacion=$pub_fecha." ".$pub_hora;
 //TAGS
 $servicios=$_POST["servicios"];
 if($servicios==""){ $union_servicios=0; }
-elseif($servicios<>""){ $union_servicios=implode(",", $servicios);}
+elseif($servicios<>""){ $union_servicios=implode(" ", $servicios);}
 
 //PUBLICAR
 if ($_POST["publicar"]<>""){ $publicar=$_POST["publicar"]; }else{ $publicar=0; }
@@ -45,7 +45,7 @@ $rst_guardar=mysql_query("UPDATE ".$tabla_suf."_portafolio SET url='$url', titul
 	publicar=$publicar, 
 	enlace='$enlace',
 	palabras_clave='$palabras_clave',
-	servicios='0,$union_servicios,0' WHERE id=$nota_id;", $conexion);
+	servicios='$union_servicios' WHERE id=$nota_id;", $conexion);
 
 if (mysql_errno()!=0){
 	echo "ERROR: <strong>".mysql_errno()."</strong> - ". mysql_error();

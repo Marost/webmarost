@@ -89,10 +89,10 @@ $rst_porta=mysql_query("SELECT * FROM ".$tabla_suf."_portafolio_servicios ORDER 
                         <div class="grid9">
 
                             <?php while($fila_porta=mysql_fetch_array($rst_porta)){
-                                    $Porta_id=$fila_porta["id"];
+                                    $Porta_url=$fila_porta["url"];
                                     $Porta_titulo=$fila_porta["titulo"];
                             ?>
-                            <input type="checkbox" name="servicios[]" value="<?php echo $Porta_id; ?>" />
+                            <input type="checkbox" name="servicios[]" value="<?php echo $Porta_url; ?>" />
                             <label class="mr20"><?php echo $Porta_titulo; ?></label>
                             <?php } ?>
 
