@@ -30,7 +30,7 @@
 
                             <ul id="tiny">
 
-                                <li><a href="index.php" class="active">Inicio</a></li>
+                                <li><a href="index.php">Inicio</a></li>
                                 <li><a href="about-page.php">Nosotros</a></li>
                                 <li><a href="pricing-tables.php">Paginas Web</a></li>
                                 <li><a href="pricing-tables.php">Hosting</a></li>
